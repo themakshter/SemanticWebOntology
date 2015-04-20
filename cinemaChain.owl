@@ -87,6 +87,9 @@
         <Class IRI="#SouthAmerica"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Trilogy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Writer"/>
     </Declaration>
     <Declaration>
@@ -103,6 +106,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#EditorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#FilmOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#PlayedBy"/>
@@ -136,6 +142,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEditor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFilm"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasProducer"/>
@@ -270,6 +279,16 @@
             <NamedIndividual IRI="#Columbia"/>
         </ObjectOneOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Trilogy"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#FilmSeries"/>
+            <ObjectExactCardinality cardinality="3">
+                <ObjectProperty IRI="#hasFilm"/>
+                <Class IRI="#Film"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Actor"/>
         <Class IRI="#Person"/>
@@ -403,6 +422,13 @@
             <DataProperty IRI="#hasReleaseYear"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilmSeries"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#hasFilm"/>
+            <Class IRI="#Film"/>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Male"/>
@@ -596,6 +622,10 @@
         <ObjectProperty IRI="#EditorOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#FilmOf"/>
+        <ObjectProperty IRI="#hasFilm"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#Plays"/>
         <ObjectProperty IRI="#PlayedBy"/>
     </InverseObjectProperties>
@@ -638,6 +668,10 @@
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#FilmOf"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#PlayedBy"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
@@ -674,6 +708,10 @@
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFilm"/>
+        <Class IRI="#FilmSeries"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasProducer"/>
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
@@ -704,6 +742,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#EditorOf"/>
         <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#FilmOf"/>
+        <Class IRI="#FilmSeries"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#PlayedBy"/>
@@ -740,6 +782,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEditor"/>
         <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFilm"/>
+        <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasProducer"/>
