@@ -28,6 +28,58 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal datatypeIRI="&xsd;string">Cinema Chain Ontology</Literal>
     </Annotation>
+    <Declaration>
+        <Class IRI="#Female"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Male"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sex"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSex"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Female"/>
+        <Class IRI="#Sex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Male"/>
+        <Class IRI="#Sex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSex"/>
+            <Class IRI="#Sex"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sex"/>
+        <ObjectUnionOf>
+            <Class IRI="#Female"/>
+            <Class IRI="#Male"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Female"/>
+        <Class IRI="#Male"/>
+    </DisjointClasses>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSex"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSex"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSex"/>
+        <Class IRI="#Sex"/>
+    </ObjectPropertyRange>
 </Ontology>
 
 
