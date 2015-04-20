@@ -77,7 +77,28 @@
         <Class IRI="#Writer"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasActedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComposed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDirected"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEdited"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPlayedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProduced"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasSex"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWorkedOn"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasAwardYear"/>
@@ -89,7 +110,16 @@
         <DataProperty IRI="#hasDeathYear"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasEventYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasReleaseYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasYear"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Actor"/>
@@ -143,13 +173,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Person"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasBirthYear"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ProductionCompany"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
@@ -168,6 +191,34 @@
         <Class IRI="#Female"/>
         <Class IRI="#Male"/>
     </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasActedIn"/>
+        <ObjectProperty IRI="#hasWorkedOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComposed"/>
+        <ObjectProperty IRI="#hasWorkedOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDirected"/>
+        <ObjectProperty IRI="#hasWorkedOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEdited"/>
+        <ObjectProperty IRI="#hasWorkedOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPlayedIn"/>
+        <ObjectProperty IRI="#hasWorkedOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasProduced"/>
+        <ObjectProperty IRI="#hasWorkedOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWorkedOn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasSex"/>
     </FunctionalObjectProperty>
@@ -180,20 +231,25 @@
         <Class IRI="#Sex"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasAwardYear"/>
+        <DataProperty IRI="#hasYear"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasBirthYear"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="#hasEventYear"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasDeathYear"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="#hasEventYear"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasEventYear"/>
+        <DataProperty IRI="#hasYear"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasReleaseYear"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="#hasYear"/>
     </SubDataPropertyOf>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#hasBirthYear"/>
-    </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasReleaseYear"/>
     </FunctionalDataProperty>
@@ -207,6 +263,22 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasDeathYear"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEventYear"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Award"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Film"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
         <Class IRI="#Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -224,6 +296,14 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasDeathYear"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEventYear"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasReleaseYear"/>
