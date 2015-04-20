@@ -99,6 +99,9 @@
         <ObjectProperty IRI="#ActorOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#BirthCountryOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#BornIn"/>
     </Declaration>
     <Declaration>
@@ -145,6 +148,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasComposer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasDirector"/>
@@ -452,6 +458,13 @@
     <SubClassOf>
         <Class IRI="#Person"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCountryOfBirth"/>
+            <Class IRI="#Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasSex"/>
             <Class IRI="#Sex"/>
         </ObjectSomeValuesFrom>
@@ -520,6 +533,7 @@
         <Class IRI="#Genre"/>
         <Class IRI="#Person"/>
         <Class IRI="#ProductionCompany"/>
+        <Class IRI="#Release"/>
         <Class IRI="#Sex"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -642,6 +656,10 @@
         <ObjectProperty IRI="#hasActor"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#BirthCountryOf"/>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
         <ObjectProperty IRI="#hasCharacter"/>
     </InverseObjectProperties>
@@ -685,6 +703,9 @@
         <ObjectProperty IRI="#BornIn"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasDirector"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
@@ -693,6 +714,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#ActorOf"/>
         <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#BirthCountryOf"/>
+        <Class IRI="#Country"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#BornIn"/>
@@ -751,6 +776,10 @@
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDirector"/>
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
@@ -785,6 +814,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#ActorOf"/>
         <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#BirthCountryOf"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#BornIn"/>
@@ -841,6 +874,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasComposer"/>
         <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
+        <Class IRI="#Country"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDirector"/>
@@ -947,10 +984,6 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasReleaseYear"/>
-        <Class IRI="#Film"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasReleaseYear"/>
         <Class IRI="#Release"/>
     </DataPropertyDomain>
     <DataPropertyRange>
@@ -993,6 +1026,11 @@
         <DataProperty IRI="#hasReleaseYear"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal datatypeIRI="&xsd;string">Class to define a Person. A person must have a sex, name, year of birth and country of birth</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
