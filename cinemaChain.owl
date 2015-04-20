@@ -234,13 +234,6 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Director"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#DirectorOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Europe"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Bulgaria"/>
@@ -307,6 +300,13 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Director"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#DirectorOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Editor"/>
         <Class IRI="#Person"/>
     </SubClassOf>
@@ -333,35 +333,35 @@
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasActor"/>
-            <Class IRI="#Actor"/>
+            <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasCharacter"/>
-            <Class IRI="#Character"/>
+            <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasComposer"/>
-            <Class IRI="#Composer"/>
+            <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasDirector"/>
-            <Class IRI="#Director"/>
+            <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasEditor"/>
-            <Class IRI="#Editor"/>
+            <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -375,7 +375,7 @@
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasWriter"/>
-            <Class IRI="#Writer"/>
+            <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
