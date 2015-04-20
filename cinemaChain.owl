@@ -81,6 +81,9 @@
         <Class IRI="#ProductionCompany"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Release"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Sex"/>
     </Declaration>
     <Declaration>
@@ -94,6 +97,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#ActorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#BornIn"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -118,6 +124,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#ProducerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ReleaseOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#WorkedOnBy"/>
@@ -148,6 +157,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasProducer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelease"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReleaseCountry"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSex"/>
@@ -405,6 +420,13 @@
     <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRelease"/>
+            <Class IRI="#Release"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasWriter"/>
             <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
@@ -414,13 +436,6 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasFilmName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasReleaseYear"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -460,6 +475,20 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasProductionCompanyName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Release"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasReleaseCountry"/>
+            <Class IRI="#Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Release"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasReleaseYear"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -641,6 +670,10 @@
         <ObjectProperty IRI="#hasProducer"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#ReleaseOf"/>
+        <ObjectProperty IRI="#hasRelease"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#WorkedOnBy"/>
         <ObjectProperty IRI="#WorksOn"/>
     </InverseObjectProperties>
@@ -649,6 +682,9 @@
         <ObjectProperty IRI="#WriterOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#BornIn"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasDirector"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
@@ -656,6 +692,10 @@
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#ActorOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#BornIn"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -691,6 +731,10 @@
         <Class IRI="#ProductionCompany"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ReleaseOf"/>
+        <Class IRI="#Release"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#WriterOf"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
@@ -721,6 +765,14 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasProducer"/>
         <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelease"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReleaseCountry"/>
+        <Class IRI="#Release"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSex"/>
@@ -735,6 +787,10 @@
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#BornIn"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#CharacterOf"/>
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
@@ -764,6 +820,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#ProducerOf"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ReleaseOf"/>
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -797,6 +857,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasProducer"/>
         <Class IRI="#ProductionCompany"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelease"/>
+        <Class IRI="#Release"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReleaseCountry"/>
+        <Class IRI="#Country"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSex"/>
@@ -880,6 +948,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasReleaseYear"/>
         <Class IRI="#Film"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasReleaseYear"/>
+        <Class IRI="#Release"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#hasAwardName"/>
