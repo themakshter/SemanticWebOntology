@@ -456,6 +456,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ProductionCompany"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasProductionCompanyName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#SouthAmerica"/>
         <Class IRI="#Country"/>
     </SubClassOf>
