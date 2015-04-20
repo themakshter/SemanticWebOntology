@@ -50,6 +50,9 @@
         <Class IRI="#Editor"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Europe"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Female"/>
     </Declaration>
     <Declaration>
@@ -121,6 +124,69 @@
     <Declaration>
         <DataProperty IRI="#hasYear"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brazil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bulgaria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#China"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Columbia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Germany"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pakistan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Spain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sudan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UAE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#USA"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Country"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#China"/>
+            <NamedIndividual IRI="#Bulgaria"/>
+            <NamedIndividual IRI="#USA"/>
+            <NamedIndividual IRI="#Germany"/>
+            <NamedIndividual IRI="#Columbia"/>
+            <NamedIndividual IRI="#UK"/>
+            <NamedIndividual IRI="#Brazil"/>
+            <NamedIndividual IRI="#UAE"/>
+            <NamedIndividual IRI="#France"/>
+            <NamedIndividual IRI="#Pakistan"/>
+            <NamedIndividual IRI="#Spain"/>
+            <NamedIndividual IRI="#Sudan"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Europe"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Bulgaria"/>
+            <NamedIndividual IRI="#Germany"/>
+            <NamedIndividual IRI="#France"/>
+            <NamedIndividual IRI="#Spain"/>
+            <NamedIndividual IRI="#UK"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Actor"/>
         <Class IRI="#Person"/>
@@ -144,6 +210,10 @@
     <SubClassOf>
         <Class IRI="#Editor"/>
         <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Europe"/>
+        <Class IRI="#Country"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Female"/>
@@ -191,6 +261,54 @@
         <Class IRI="#Female"/>
         <Class IRI="#Male"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Brazil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Bulgaria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#China"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Columbia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Germany"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Pakistan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Spain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Sudan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#UAE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#UK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#USA"/>
+    </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasActedIn"/>
         <ObjectProperty IRI="#hasWorkedOn"/>
