@@ -323,6 +323,16 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Composer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ComposerOf"/>
+                <Class IRI="#Film"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Country"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#China"/>
@@ -356,6 +366,26 @@
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hasSex"/>
                 <Class IRI="#Female"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Director"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#DirectorOf"/>
+                <Class IRI="#Film"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Editor"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#EditorOf"/>
+                <Class IRI="#Film"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -438,6 +468,24 @@
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Writer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#WriterOf"/>
+                <Class IRI="#Film"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WriterAndDirector"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Director"/>
+            <Class IRI="#Person"/>
+            <Class IRI="#Writer"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Actor"/>
         <Class IRI="#Person"/>
@@ -480,39 +528,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#PlayedBy"/>
             <Class IRI="#Person"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Composer"/>
-        <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Composer"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#ComposerOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Director"/>
-        <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Director"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#DirectorOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Editor"/>
-        <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Editor"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#EditorOf"/>
-            <Class IRI="#Film"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -670,21 +685,6 @@
     <SubClassOf>
         <Class IRI="#SouthAmerica"/>
         <Class IRI="#Country"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Writer"/>
-        <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Writer"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#WriterOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#WriterAndDirector"/>
-        <Class IRI="#Person"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Africa"/>
