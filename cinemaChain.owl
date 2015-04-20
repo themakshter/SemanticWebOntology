@@ -234,6 +234,13 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Director"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#DirectorOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Europe"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Bulgaria"/>
@@ -255,6 +262,13 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Actor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ActorOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Africa"/>
         <Class IRI="#Country"/>
     </SubClassOf>
@@ -267,8 +281,22 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#CharacterOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Composer"/>
         <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ComposerOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Country"/>
@@ -283,6 +311,13 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Editor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#EditorOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Europe"/>
         <Class IRI="#Country"/>
     </SubClassOf>
@@ -293,6 +328,55 @@
     <SubClassOf>
         <Class IRI="#Film"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasActor"/>
+            <Class IRI="#Actor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharacter"/>
+            <Class IRI="#Character"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasComposer"/>
+            <Class IRI="#Composer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDirector"/>
+            <Class IRI="#Director"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEditor"/>
+            <Class IRI="#Editor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasProducer"/>
+            <Class IRI="#ProductionCompany"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWriter"/>
+            <Class IRI="#Writer"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FilmSeries"/>
@@ -332,6 +416,13 @@
         <Class IRI="#Writer"/>
         <Class IRI="#Person"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Writer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WriterOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Africa"/>
         <Class IRI="#Asia"/>
@@ -340,6 +431,7 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Award"/>
+        <Class IRI="#Country"/>
         <Class IRI="#Film"/>
         <Class IRI="#FilmSeries"/>
         <Class IRI="#Genre"/>
