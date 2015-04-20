@@ -51,6 +51,9 @@
         <Class IRI="#Country"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CrossGenderFemaleCharacter"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Director"/>
     </Declaration>
     <Declaration>
@@ -400,6 +403,13 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PlayedBy"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Composer"/>
         <Class IRI="#Person"/>
     </SubClassOf>
@@ -408,6 +418,23 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#ComposerOf"/>
             <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CrossGenderFemaleCharacter"/>
+        <Class IRI="#Character"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CrossGenderFemaleCharacter"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PlayedBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Person"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasSex"/>
+                    <Class IRI="#Male"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
