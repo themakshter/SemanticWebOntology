@@ -146,6 +146,9 @@
         <ObjectProperty IRI="#hasWriter"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasAwardName"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasAwardYear"/>
     </Declaration>
     <Declaration>
@@ -158,7 +161,16 @@
         <DataProperty IRI="#hasEventYear"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasFilmName"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPersonName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasProductionCompanyName"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasReleaseYear"/>
@@ -262,13 +274,6 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Actor"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#ActorOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Africa"/>
         <Class IRI="#Country"/>
     </SubClassOf>
@@ -281,48 +286,16 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Character"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#CharacterOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Composer"/>
         <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Composer"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#ComposerOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Country"/>
-        <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Director"/>
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Director"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#DirectorOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Editor"/>
         <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Editor"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#EditorOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Europe"/>
@@ -331,74 +304,6 @@
     <SubClassOf>
         <Class IRI="#Female"/>
         <Class IRI="#Sex"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasActor"/>
-            <Class IRI="#Person"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasCharacter"/>
-            <Class IRI="#Person"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasComposer"/>
-            <Class IRI="#Person"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasDirector"/>
-            <Class IRI="#Person"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasEditor"/>
-            <Class IRI="#Person"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasProducer"/>
-            <Class IRI="#ProductionCompany"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasWriter"/>
-            <Class IRI="#Person"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasReleaseYear"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FilmSeries"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Genre"/>
-        <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Male"/>
@@ -419,30 +324,12 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Person"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasName"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ProductionCompany"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#SouthAmerica"/>
         <Class IRI="#Country"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Writer"/>
         <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Writer"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#WriterOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Africa"/>
@@ -459,6 +346,13 @@
         <Class IRI="#Person"/>
         <Class IRI="#ProductionCompany"/>
         <Class IRI="#Sex"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Character"/>
+        <Class IRI="#Composer"/>
+        <Class IRI="#Director"/>
+        <Class IRI="#Editor"/>
+        <Class IRI="#Writer"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Female"/>
@@ -747,6 +641,10 @@
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasAwardName"/>
+        <DataProperty IRI="#hasName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasAwardYear"/>
         <DataProperty IRI="#hasYear"/>
     </SubDataPropertyOf>
@@ -761,6 +659,18 @@
     <SubDataPropertyOf>
         <DataProperty IRI="#hasEventYear"/>
         <DataProperty IRI="#hasYear"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasFilmName"/>
+        <DataProperty IRI="#hasName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPersonName"/>
+        <DataProperty IRI="#hasName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasProductionCompanyName"/>
+        <DataProperty IRI="#hasName"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasReleaseYear"/>
@@ -770,6 +680,10 @@
         <DataProperty IRI="#hasReleaseYear"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasAwardName"/>
+        <Class IRI="#Award"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasAwardYear"/>
         <Class IRI="#Award"/>
     </DataPropertyDomain>
@@ -786,22 +700,26 @@
         <Class IRI="#Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasName"/>
-        <Class IRI="#Award"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasName"/>
+        <DataProperty IRI="#hasFilmName"/>
         <Class IRI="#Film"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasName"/>
+        <DataProperty IRI="#hasPersonName"/>
         <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasProductionCompanyName"/>
+        <Class IRI="#ProductionCompany"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasReleaseYear"/>
         <Class IRI="#Film"/>
     </DataPropertyDomain>
     <DataPropertyRange>
+        <DataProperty IRI="#hasAwardName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasAwardYear"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
@@ -818,7 +736,19 @@
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasFilmName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPersonName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasProductionCompanyName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
