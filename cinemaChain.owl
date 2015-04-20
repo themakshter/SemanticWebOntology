@@ -244,6 +244,13 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Sex"/>
+        <ObjectUnionOf>
+            <Class IRI="#Female"/>
+            <Class IRI="#Male"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#SouthAmerica"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Brazil"/>
@@ -421,13 +428,6 @@
     <SubClassOf>
         <Class IRI="#ProductionCompany"/>
         <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Sex"/>
-        <ObjectUnionOf>
-            <Class IRI="#Female"/>
-            <Class IRI="#Male"/>
-        </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SouthAmerica"/>
