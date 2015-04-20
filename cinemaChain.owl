@@ -274,6 +274,13 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Actor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ActorOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Africa"/>
         <Class IRI="#Country"/>
     </SubClassOf>
@@ -286,16 +293,44 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#CharacterOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Composer"/>
         <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ComposerOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Director"/>
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Director"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#DirectorOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Editor"/>
         <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Editor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#EditorOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Europe"/>
@@ -304,6 +339,48 @@
     <SubClassOf>
         <Class IRI="#Female"/>
         <Class IRI="#Sex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasActor"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharacter"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDirector"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEditor"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasFilmName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasReleaseYear"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Male"/>
@@ -324,12 +401,26 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Person"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasPersonName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#SouthAmerica"/>
         <Class IRI="#Country"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Writer"/>
         <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Writer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WriterOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Africa"/>
