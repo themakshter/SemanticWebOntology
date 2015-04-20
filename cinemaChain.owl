@@ -69,6 +69,9 @@
         <Class IRI="#FilmSeries"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#FilmingLocation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Genre"/>
     </Declaration>
     <Declaration>
@@ -120,6 +123,12 @@
         <ObjectProperty IRI="#FilmOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#FilmingLocationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#LocationCountryOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#PlayedBy"/>
     </Declaration>
     <Declaration>
@@ -162,6 +171,12 @@
         <ObjectProperty IRI="#hasFilm"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocationCountry"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasProducer"/>
     </Declaration>
     <Declaration>
@@ -193,6 +208,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasFilmName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFilmingLocationName"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasName"/>
@@ -419,6 +437,13 @@
     <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasFilmingLocation"/>
+            <Class IRI="#FilmingLocation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasProducer"/>
             <Class IRI="#ProductionCompany"/>
         </ObjectSomeValuesFrom>
@@ -450,6 +475,20 @@
             <ObjectProperty IRI="#hasFilm"/>
             <Class IRI="#Film"/>
         </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilmingLocation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasLocationCountry"/>
+            <Class IRI="#Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilmingLocation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasFilmingLocationName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Male"/>
@@ -680,6 +719,14 @@
         <ObjectProperty IRI="#hasFilm"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#FilmingLocationOf"/>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#LocationCountryOf"/>
+        <ObjectProperty IRI="#hasLocationCountry"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#Plays"/>
         <ObjectProperty IRI="#PlayedBy"/>
     </InverseObjectProperties>
@@ -744,6 +791,14 @@
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#FilmingLocationOf"/>
+        <Class IRI="#FilmingLocation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#LocationCountryOf"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#PlayedBy"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
@@ -790,6 +845,14 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasFilm"/>
         <Class IRI="#FilmSeries"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLocationCountry"/>
+        <Class IRI="#FilmingLocation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasProducer"/>
@@ -844,6 +907,14 @@
         <Class IRI="#FilmSeries"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#FilmingLocationOf"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#LocationCountryOf"/>
+        <Class IRI="#FilmingLocation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#PlayedBy"/>
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
@@ -892,6 +963,14 @@
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+        <Class IRI="#FilmingLocation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLocationCountry"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasProducer"/>
         <Class IRI="#ProductionCompany"/>
     </ObjectPropertyRange>
@@ -936,6 +1015,10 @@
         <DataProperty IRI="#hasName"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasFilmingLocationName"/>
+        <DataProperty IRI="#hasName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasPersonName"/>
         <DataProperty IRI="#hasName"/>
     </SubDataPropertyOf>
@@ -975,6 +1058,10 @@
         <Class IRI="#Film"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasFilmingLocationName"/>
+        <Class IRI="#FilmingLocation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasPersonName"/>
         <Class IRI="#Person"/>
     </DataPropertyDomain>
@@ -1008,6 +1095,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasFilmName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFilmingLocationName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
