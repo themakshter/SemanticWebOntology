@@ -89,28 +89,61 @@
         <Class IRI="#Writer"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasActedIn"/>
+        <ObjectProperty IRI="#ActorOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasComposed"/>
+        <ObjectProperty IRI="#CharacterOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasDirected"/>
+        <ObjectProperty IRI="#ComposerOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasEdited"/>
+        <ObjectProperty IRI="#DirectorOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasPlayedIn"/>
+        <ObjectProperty IRI="#EditorOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasProduced"/>
+        <ObjectProperty IRI="#PlayedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Plays"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ProducerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#WorkedOnBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#WorksOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#WriterOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCharacter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComposer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDirector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEditor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProducer"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSex"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasWorkedOn"/>
+        <ObjectProperty IRI="#hasWriter"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasAwardYear"/>
@@ -211,6 +244,13 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Person"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSex"/>
+            <Class IRI="#Sex"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#SouthAmerica"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Brazil"/>
@@ -272,13 +312,6 @@
     <SubClassOf>
         <Class IRI="#Male"/>
         <Class IRI="#Sex"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Person"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSex"/>
-            <Class IRI="#Sex"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ProductionCompany"/>
@@ -367,75 +400,215 @@
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasActedIn"/>
-        <ObjectProperty IRI="#hasWorkedOn"/>
+        <ObjectProperty IRI="#ActorOf"/>
+        <ObjectProperty IRI="#WorksOn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasComposed"/>
-        <ObjectProperty IRI="#hasWorkedOn"/>
+        <ObjectProperty IRI="#CharacterOf"/>
+        <ObjectProperty IRI="#WorksOn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasDirected"/>
-        <ObjectProperty IRI="#hasWorkedOn"/>
+        <ObjectProperty IRI="#ComposerOf"/>
+        <ObjectProperty IRI="#WorksOn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasEdited"/>
-        <ObjectProperty IRI="#hasWorkedOn"/>
+        <ObjectProperty IRI="#DirectorOf"/>
+        <ObjectProperty IRI="#WorksOn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasPlayedIn"/>
-        <ObjectProperty IRI="#hasWorkedOn"/>
+        <ObjectProperty IRI="#EditorOf"/>
+        <ObjectProperty IRI="#WorksOn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasProduced"/>
-        <ObjectProperty IRI="#hasWorkedOn"/>
+        <ObjectProperty IRI="#ProducerOf"/>
+        <ObjectProperty IRI="#WorksOn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasWorkedOn"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="#WriterOf"/>
+        <ObjectProperty IRI="#WorksOn"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasActor"/>
+        <ObjectProperty IRI="#WorkedOnBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <ObjectProperty IRI="#WorkedOnBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComposer"/>
+        <ObjectProperty IRI="#WorkedOnBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDirector"/>
+        <ObjectProperty IRI="#WorkedOnBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEditor"/>
+        <ObjectProperty IRI="#WorkedOnBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasProducer"/>
+        <ObjectProperty IRI="#WorkedOnBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWriter"/>
+        <ObjectProperty IRI="#WorkedOnBy"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ActorOf"/>
+        <ObjectProperty IRI="#hasActor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#CharacterOf"/>
+        <ObjectProperty IRI="#hasCharacter"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ComposerOf"/>
+        <ObjectProperty IRI="#hasComposer"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DirectorOf"/>
+        <ObjectProperty IRI="#hasDirector"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#EditorOf"/>
+        <ObjectProperty IRI="#hasEditor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ProducerOf"/>
+        <ObjectProperty IRI="#hasProducer"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#WorkedOnBy"/>
+        <ObjectProperty IRI="#WorksOn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#WriterOf"/>
+        <ObjectProperty IRI="#hasWriter"/>
+    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasSex"/>
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasComposed"/>
-        <Class IRI="#Composer"/>
+        <ObjectProperty IRI="#ActorOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CharacterOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ComposerOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DirectorOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#EditorOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ProducerOf"/>
+        <Class IRI="#ProductionCompany"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#WriterOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActor"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActor"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComposer"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComposer"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDirector"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEditor"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProducer"/>
+        <Class IRI="#Film"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSex"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWriter"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWriter"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasActedIn"/>
+        <ObjectProperty IRI="#ActorOf"/>
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasComposed"/>
+        <ObjectProperty IRI="#CharacterOf"/>
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDirected"/>
+        <ObjectProperty IRI="#ComposerOf"/>
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasEdited"/>
+        <ObjectProperty IRI="#DirectorOf"/>
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasPlayedIn"/>
+        <ObjectProperty IRI="#EditorOf"/>
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasProduced"/>
+        <ObjectProperty IRI="#ProducerOf"/>
         <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#WriterOf"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDirector"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEditor"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProducer"/>
+        <Class IRI="#ProductionCompany"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSex"/>
         <Class IRI="#Sex"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasWorkedOn"/>
-        <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasAwardYear"/>
