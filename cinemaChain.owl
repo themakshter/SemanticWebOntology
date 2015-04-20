@@ -203,16 +203,6 @@
         <NamedIndividual IRI="#USA"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="#Actor"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#ActorOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Africa"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Sudan"/>
@@ -225,26 +215,6 @@
             <NamedIndividual IRI="#UAE"/>
             <NamedIndividual IRI="#Pakistan"/>
         </ObjectOneOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Character"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#CharacterOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Composer"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#ComposerOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Country"/>
@@ -264,26 +234,6 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Director"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#DirectorOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Editor"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#EditorOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Europe"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Bulgaria"/>
@@ -294,28 +244,11 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Person"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSex"/>
-            <Class IRI="#Sex"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#SouthAmerica"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Brazil"/>
             <NamedIndividual IRI="#Columbia"/>
         </ObjectOneOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Writer"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#WriterOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Actor"/>
@@ -372,6 +305,13 @@
     <SubClassOf>
         <Class IRI="#Male"/>
         <Class IRI="#Sex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSex"/>
+            <Class IRI="#Sex"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ProductionCompany"/>
@@ -536,6 +476,10 @@
         <ObjectProperty IRI="#hasEditor"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#PlayedBy"/>
+        <ObjectProperty IRI="#Plays"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#ProducerOf"/>
         <ObjectProperty IRI="#hasProducer"/>
     </InverseObjectProperties>
@@ -568,6 +512,14 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#EditorOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#PlayedBy"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Plays"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -645,6 +597,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#EditorOf"/>
         <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#PlayedBy"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Plays"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#ProducerOf"/>
