@@ -32,6 +32,12 @@
         <Class IRI="#Actor"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Africa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asia"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Award"/>
     </Declaration>
     <Declaration>
@@ -75,6 +81,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Sex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SouthAmerica"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Writer"/>
@@ -161,6 +170,20 @@
         <NamedIndividual IRI="#USA"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="#Africa"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Sudan"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Asia"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#China"/>
+            <NamedIndividual IRI="#UAE"/>
+            <NamedIndividual IRI="#Pakistan"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Country"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#China"/>
@@ -187,9 +210,24 @@
             <NamedIndividual IRI="#UK"/>
         </ObjectOneOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SouthAmerica"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Brazil"/>
+            <NamedIndividual IRI="#Columbia"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Actor"/>
         <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Africa"/>
+        <Class IRI="#Country"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asia"/>
+        <Class IRI="#Country"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Character"/>
@@ -254,9 +292,28 @@
         </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#SouthAmerica"/>
+        <Class IRI="#Country"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Writer"/>
         <Class IRI="#Person"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Africa"/>
+        <Class IRI="#Asia"/>
+        <Class IRI="#Europe"/>
+        <Class IRI="#SouthAmerica"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Award"/>
+        <Class IRI="#Film"/>
+        <Class IRI="#FilmSeries"/>
+        <Class IRI="#Genre"/>
+        <Class IRI="#Person"/>
+        <Class IRI="#ProductionCompany"/>
+        <Class IRI="#Sex"/>
+    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Female"/>
         <Class IRI="#Male"/>
