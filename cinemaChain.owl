@@ -481,9 +481,11 @@
     <EquivalentClasses>
         <Class IRI="#WriterAndDirector"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Director"/>
             <Class IRI="#Person"/>
-            <Class IRI="#Writer"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Director"/>
+                <Class IRI="#Writer"/>
+            </ObjectIntersectionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
@@ -702,13 +704,6 @@
         <Class IRI="#ProductionCompany"/>
         <Class IRI="#Release"/>
         <Class IRI="#Sex"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Character"/>
-        <Class IRI="#Composer"/>
-        <Class IRI="#Director"/>
-        <Class IRI="#Editor"/>
-        <Class IRI="#Writer"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Female"/>
