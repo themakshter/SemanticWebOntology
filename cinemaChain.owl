@@ -384,6 +384,37 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#RomanticComedyFilm"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Film"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasFilmGenre"/>
+                <NamedIndividual IRI="#Comedy"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasFilmGenre"/>
+                <NamedIndividual IRI="#Romance"/>
+            </ObjectHasValue>
+            <ObjectExactCardinality cardinality="2">
+                <ObjectProperty IRI="#hasFilmGenre"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RomanticComedyLocationUK"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#FilmingLocation"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#FilmingLocationOf"/>
+                <Class IRI="#RomanticComedyFilm"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasLocationCountry"/>
+                <NamedIndividual IRI="#UK"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Sex"/>
         <ObjectUnionOf>
             <Class IRI="#Female"/>
@@ -635,21 +666,6 @@
             <DataProperty IRI="#hasReleaseYear"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#RomanticComedyFilm"/>
-        <Class IRI="#Film"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#RomanticComedyLocationUK"/>
-        <Class IRI="#FilmingLocation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#RomanticComedyLocationUK"/>
-        <ObjectHasValue>
-            <ObjectProperty IRI="#hasLocationCountry"/>
-            <NamedIndividual IRI="#UK"/>
-        </ObjectHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SouthAmerica"/>
