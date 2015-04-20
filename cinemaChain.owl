@@ -16,10 +16,11 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="&xsd;string">A cinema chain ontolgoy which describes films and the people and locations associated with them</Literal>
@@ -357,6 +358,13 @@
     <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasComposer"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasDirector"/>
             <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
@@ -365,6 +373,20 @@
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasEditor"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasProducer"/>
+            <Class IRI="#ProductionCompany"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWriter"/>
             <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -570,12 +592,12 @@
         <ObjectProperty IRI="#hasDirector"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#EditorOf"/>
         <ObjectProperty IRI="#hasEditor"/>
+        <ObjectProperty IRI="#EditorOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#PlayedBy"/>
         <ObjectProperty IRI="#Plays"/>
+        <ObjectProperty IRI="#PlayedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#ProducerOf"/>
@@ -586,8 +608,8 @@
         <ObjectProperty IRI="#WorksOn"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#WriterOf"/>
         <ObjectProperty IRI="#hasWriter"/>
+        <ObjectProperty IRI="#WriterOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasDirector"/>
