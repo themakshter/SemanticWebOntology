@@ -605,6 +605,13 @@ Email: mak1g11@soton.ac.uk</Literal>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#FilmSeries"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#hasFilmInSeries"/>
+            <Class IRI="#Film"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Genre"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Comedy"/>
@@ -865,13 +872,6 @@ Email: mak1g11@soton.ac.uk</Literal>
             <ObjectProperty IRI="#AwardedToFilm"/>
             <Class IRI="#Film"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FilmSeries"/>
-        <ObjectMinCardinality cardinality="2">
-            <ObjectProperty IRI="#hasFilmInSeries"/>
-            <Class IRI="#Film"/>
-        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FilmingLocation"/>
@@ -1292,6 +1292,11 @@ Email: mak1g11@soton.ac.uk</Literal>
         <NamedIndividual IRI="#Titanic"/>
         <NamedIndividual IRI="#StevenSpielberg"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+        <Literal datatypeIRI="&xsd;string">The Matrix</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ActorAwarded"/>
         <ObjectProperty IRI="#PersonAwarded"/>
