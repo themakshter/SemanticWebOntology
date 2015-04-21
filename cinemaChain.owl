@@ -116,9 +116,6 @@
         <Class IRI="#FilmingLocation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Genre"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#InFilmAward"/>
     </Declaration>
     <Declaration>
@@ -585,20 +582,6 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Genre"/>
-        <ObjectOneOf>
-            <NamedIndividual IRI="#Comedy"/>
-            <NamedIndividual IRI="#Horror"/>
-            <NamedIndividual IRI="#Thriller"/>
-            <NamedIndividual IRI="#Crime"/>
-            <NamedIndividual IRI="#Animation"/>
-            <NamedIndividual IRI="#Action"/>
-            <NamedIndividual IRI="#Family"/>
-            <NamedIndividual IRI="#Romance"/>
-            <NamedIndividual IRI="#Mystery"/>
-        </ObjectOneOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#PersonSubject"/>
         <ObjectIntersectionOf>
             <Class IRI="#Person"/>
@@ -1027,31 +1010,9 @@
             <Class IRI="#Writer"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#Award"/>
-        <Class IRI="#Character"/>
-        <Class IRI="#Film"/>
-        <Class IRI="#FilmSeries"/>
-        <Class IRI="#Genre"/>
-        <Class IRI="#Person"/>
-        <Class IRI="#Place"/>
-        <Class IRI="#ProductionCompany"/>
-        <Class IRI="#Release"/>
-        <Class IRI="#Role"/>
-        <Class IRI="#Sex"/>
-        <Class IRI="#Subject"/>
-    </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Film"/>
         <NamedIndividual IRI="#500DaysOfSummer"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Genre"/>
-        <NamedIndividual IRI="#Action"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Genre"/>
-        <NamedIndividual IRI="#Animation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Person"/>
@@ -1074,16 +1035,8 @@
         <NamedIndividual IRI="#Columbia"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Genre"/>
-        <NamedIndividual IRI="#Comedy"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Person"/>
         <NamedIndividual IRI="#ComposerWhoIsSubject"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Genre"/>
-        <NamedIndividual IRI="#Crime"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Person"/>
@@ -1094,20 +1047,12 @@
         <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Genre"/>
-        <NamedIndividual IRI="#Family"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#France"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Germany"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Genre"/>
-        <NamedIndividual IRI="#Horror"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Person"/>
@@ -1126,20 +1071,12 @@
         <NamedIndividual IRI="#London"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Genre"/>
-        <NamedIndividual IRI="#Mystery"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Pakistan"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Person"/>
         <NamedIndividual IRI="#PierceBrosnan"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Genre"/>
-        <NamedIndividual IRI="#Romance"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Person"/>
@@ -1192,10 +1129,6 @@
     <ClassAssertion>
         <Class IRI="#FilmSeries"/>
         <NamedIndividual IRI="#TheTerminatorSeries"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Genre"/>
-        <NamedIndividual IRI="#Thriller"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Film"/>
@@ -1567,8 +1500,8 @@
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isFilmOfInSeries"/>
         <ObjectProperty IRI="#hasFilmInSeries"/>
+        <ObjectProperty IRI="#isFilmOfInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasPlace"/>
@@ -2233,11 +2166,6 @@ E(example)
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#FilmingLocation</IRI>
         <Literal datatypeIRI="&xsd;string">Filming location for a Film. It will be in a country and will have a Film at this location, but can have numerous</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Genre</IRI>
-        <Literal datatypeIRI="&xsd;string">A genre class for films. It consists of individuals and a film may have more than genre</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
