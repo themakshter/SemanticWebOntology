@@ -405,6 +405,9 @@
         <NamedIndividual IRI="#Sudan"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Terminator"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#TheMatrix"/>
     </Declaration>
     <Declaration>
@@ -444,6 +447,20 @@
         <NamedIndividual IRI="#USA"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="#Actor"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ActorOf"/>
+                <Class IRI="#Film"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Plays"/>
+                <Class IRI="#Person"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Africa"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Sudan"/>
@@ -456,6 +473,20 @@
             <NamedIndividual IRI="#UAE"/>
             <NamedIndividual IRI="#Pakistan"/>
         </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Character"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#CharacterOf"/>
+                <Class IRI="#Film"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#PlayedBy"/>
+                <Class IRI="#Actor"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Composer"/>
@@ -637,24 +668,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="#Actor"/>
-        <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Actor"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#ActorOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Actor"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Plays"/>
-            <Class IRI="#Person"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ActorAward"/>
         <Class IRI="#PersonAward"/>
     </SubClassOf>
@@ -686,24 +699,6 @@
             <DataProperty IRI="#hasAwardYear"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Character"/>
-        <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Character"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#CharacterOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Character"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#PlayedBy"/>
-            <Class IRI="#Actor"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ComposerAward"/>
@@ -1071,6 +1066,10 @@
         <NamedIndividual IRI="#Sudan"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Terminator"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Film"/>
         <NamedIndividual IRI="#TheMatrix"/>
     </ClassAssertion>
@@ -1122,6 +1121,16 @@
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CharacterOf"/>
+        <NamedIndividual IRI="#Terminator"/>
+        <NamedIndividual IRI="#TheTerminator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#PlayedBy"/>
+        <NamedIndividual IRI="#Terminator"/>
+        <NamedIndividual IRI="#ArnoldSchwarzenegger"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmInSeries"/>
         <NamedIndividual IRI="#TheMatrixTrilogy"/>
