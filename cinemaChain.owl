@@ -54,6 +54,9 @@
         <Class IRI="#ComposerAward"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ComposerSubject"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Country"/>
     </Declaration>
     <Declaration>
@@ -105,6 +108,9 @@
         <Class IRI="#PersonAward"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PersonSubject"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ProducerAward"/>
     </Declaration>
     <Declaration>
@@ -124,6 +130,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#SouthAmerica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Subject"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Trilogy"/>
@@ -288,10 +297,16 @@
         <ObjectProperty IRI="#hasSex"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasSubject"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasWriter"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isFilmGenreOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSubjectOf"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasAwardName"/>
@@ -417,6 +432,13 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#ComposerSubject"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Composer"/>
+            <Class IRI="#PersonSubject"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Country"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#China"/>
@@ -496,6 +518,13 @@
             <NamedIndividual IRI="#Romance"/>
             <NamedIndividual IRI="#Mystery"/>
         </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PersonSubject"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <Class IRI="#Subject"/>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#RomanticComedyFilm"/>
@@ -741,6 +770,13 @@
     <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSubject"/>
+            <Class IRI="#Subject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Film"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasWriter"/>
             <Class IRI="#Person"/>
         </ObjectSomeValuesFrom>
@@ -873,6 +909,13 @@
     <SubClassOf>
         <Class IRI="#SouthAmerica"/>
         <Class IRI="#Country"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Subject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isSubjectOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WriterAward"/>
@@ -1209,6 +1252,10 @@
         <ObjectProperty IRI="#isFilmGenreOf"/>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isSubjectOf"/>
+        <ObjectProperty IRI="#hasSubject"/>
+    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#BornIn"/>
     </FunctionalObjectProperty>
@@ -1223,6 +1270,9 @@
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasSex"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSubject"/>
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#ActorAwarded"/>
@@ -1409,12 +1459,20 @@
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasWriter"/>
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isFilmGenreOf"/>
         <Class IRI="#Genre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSubjectOf"/>
+        <Class IRI="#Subject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#ActorAwarded"/>
@@ -1601,11 +1659,19 @@
         <Class IRI="#Sex"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#Subject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasWriter"/>
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isFilmGenreOf"/>
+        <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSubjectOf"/>
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
