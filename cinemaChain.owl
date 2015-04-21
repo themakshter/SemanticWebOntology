@@ -23,7 +23,11 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&xsd;string">A cinema chain ontolgoy which describes films and the people and locations associated with them</Literal>
+        <Literal datatypeIRI="&xsd;string">A cinema chain ontolgoy which describes films and the people and locations associated with them.
+
+Created by: Mohammad Ali Khan
+
+Email: mak1g11@soton.ac.uk</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -345,6 +349,9 @@
         <DataProperty IRI="#hasYear"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Action"/>
     </Declaration>
     <Declaration>
@@ -375,6 +382,9 @@
         <NamedIndividual IRI="#Crime"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DanielCraig"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ExampleFIlmForComposerAsSubject"/>
     </Declaration>
     <Declaration>
@@ -393,6 +403,12 @@
         <NamedIndividual IRI="#Horror"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#JamesBond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JamesBondActorBefore1981"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#KeanuReeves"/>
     </Declaration>
     <Declaration>
@@ -402,7 +418,13 @@
         <NamedIndividual IRI="#Pakistan"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#PierceBrosnan"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Romance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SeanConnery"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Spain"/>
@@ -612,9 +634,6 @@
                 <ObjectProperty IRI="#hasFilmGenre"/>
                 <NamedIndividual IRI="#Romance"/>
             </ObjectHasValue>
-            <ObjectExactCardinality cardinality="2">
-                <ObjectProperty IRI="#hasFilmGenre"/>
-            </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -993,6 +1012,10 @@
         <Class IRI="#Male"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Genre"/>
         <NamedIndividual IRI="#Action"/>
     </ClassAssertion>
@@ -1033,6 +1056,10 @@
         <NamedIndividual IRI="#Crime"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#DanielCraig"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Film"/>
         <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
     </ClassAssertion>
@@ -1054,6 +1081,14 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Person"/>
+        <NamedIndividual IRI="#JamesBond"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#JamesBondActorBefore1981"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
         <NamedIndividual IRI="#KeanuReeves"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1065,8 +1100,16 @@
         <NamedIndividual IRI="#Pakistan"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#PierceBrosnan"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Genre"/>
         <NamedIndividual IRI="#Romance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#SeanConnery"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Country"/>
@@ -1144,6 +1187,16 @@
         <Class IRI="#Person"/>
         <NamedIndividual IRI="#WriterAndDirectorOfFilm"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+        <NamedIndividual IRI="#Comedy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ActorOf"/>
         <NamedIndividual IRI="#ArnoldSchwarzenegger"/>
