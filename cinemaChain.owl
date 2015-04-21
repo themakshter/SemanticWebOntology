@@ -1294,6 +1294,11 @@ Email: mak1g11@soton.ac.uk</Literal>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+        <Literal datatypeIRI="&xsd;string">500 Days of Summer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
         <NamedIndividual IRI="#TheMatrix"/>
         <Literal datatypeIRI="&xsd;string">The Matrix</Literal>
     </DataPropertyAssertion>
@@ -1454,8 +1459,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
         <ObjectProperty IRI="#BirthCountryOf"/>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1506,8 +1511,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isFilmOfInSeries"/>
         <ObjectProperty IRI="#hasFilmInSeries"/>
+        <ObjectProperty IRI="#isFilmOfInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasSubject"/>
