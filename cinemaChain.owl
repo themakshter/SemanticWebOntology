@@ -438,6 +438,9 @@
         <NamedIndividual IRI="#Thriller"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Titanic"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#UAE"/>
     </Declaration>
     <Declaration>
@@ -451,12 +454,8 @@
         <ObjectIntersectionOf>
             <Class IRI="#Person"/>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#ActorOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#Plays"/>
-                <Class IRI="#Person"/>
+                <Class IRI="#Character"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -478,10 +477,6 @@
         <Class IRI="#Character"/>
         <ObjectIntersectionOf>
             <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#CharacterOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#PlayedBy"/>
                 <Class IRI="#Actor"/>
@@ -1110,6 +1105,10 @@
         <NamedIndividual IRI="#Thriller"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#Titanic"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#UAE"/>
     </ClassAssertion>
@@ -1121,6 +1120,11 @@
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ActorOf"/>
+        <NamedIndividual IRI="#ArnoldSchwarzenegger"/>
+        <NamedIndividual IRI="#TheTerminator"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#CharacterOf"/>
         <NamedIndividual IRI="#Terminator"/>
@@ -1165,6 +1169,16 @@
         <ObjectProperty IRI="#hasFilmInSeries"/>
         <NamedIndividual IRI="#TheTerminatorSeries"/>
         <NamedIndividual IRI="#TheTerminator2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDirector"/>
+        <NamedIndividual IRI="#Titanic"/>
+        <NamedIndividual IRI="#StevenSpielberg"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWriter"/>
+        <NamedIndividual IRI="#Titanic"/>
+        <NamedIndividual IRI="#StevenSpielberg"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ActorAwarded"/>
