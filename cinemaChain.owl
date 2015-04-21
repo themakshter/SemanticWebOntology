@@ -506,16 +506,6 @@
         <AnnotationProperty IRI="#example"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="#Actor"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#Plays"/>
-                <Class IRI="#Character"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Africa"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Sudan"/>
@@ -528,16 +518,6 @@
             <NamedIndividual IRI="#UAE"/>
             <NamedIndividual IRI="#Pakistan"/>
         </ObjectOneOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Character"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#PlayedBy"/>
-                <Class IRI="#Actor"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#ComposerSubject"/>
@@ -684,6 +664,17 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="#Actor"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Plays"/>
+            <Class IRI="#Character"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ActorAward"/>
         <Class IRI="#PersonAward"/>
     </SubClassOf>
@@ -715,6 +706,13 @@
             <DataProperty IRI="#hasAwardYear"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PlayedBy"/>
+            <Class IRI="#Actor"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Composer"/>
