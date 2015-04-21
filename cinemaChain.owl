@@ -369,7 +369,16 @@
         <NamedIndividual IRI="#Comedy"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ComposerWhoIsSubject"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Crime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExampleFIlmForComposerAsSubject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Family"/>
@@ -448,6 +457,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#USA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WriterAndDirectorOfFilm"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Actor"/>
@@ -1013,8 +1025,16 @@
         <NamedIndividual IRI="#Comedy"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#ComposerWhoIsSubject"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Genre"/>
         <NamedIndividual IRI="#Crime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Genre"/>
@@ -1120,10 +1140,34 @@
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#WriterAndDirectorOfFilm"/>
+    </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ActorOf"/>
         <NamedIndividual IRI="#ArnoldSchwarzenegger"/>
         <NamedIndividual IRI="#TheTerminator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComposer"/>
+        <NamedIndividual IRI="#ExampleFIlmForComposerAsSubject"/>
+        <NamedIndividual IRI="#ComposerWhoIsSubject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSubject"/>
+        <NamedIndividual IRI="#ExampleFIlmForComposerAsSubject"/>
+        <NamedIndividual IRI="#ComposerWhoIsSubject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDirector"/>
+        <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
+        <NamedIndividual IRI="#WriterAndDirectorOfFilm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWriter"/>
+        <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
+        <NamedIndividual IRI="#WriterAndDirectorOfFilm"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#CharacterOf"/>
