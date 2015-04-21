@@ -93,6 +93,9 @@
         <Class IRI="#Genre"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#InFilmAward"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Male"/>
     </Declaration>
     <Declaration>
@@ -145,6 +148,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Awarded"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AwardedInFilm"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#AwardedTo"/>
@@ -589,6 +595,13 @@
         <Class IRI="#PersonAward"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ActorAward"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AwardedToActor"/>
+            <Class IRI="#Actor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Africa"/>
         <Class IRI="#Country"/>
     </SubClassOf>
@@ -633,12 +646,33 @@
         <Class IRI="#PersonAward"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ComposerAward"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AwardedToComposer"/>
+            <Class IRI="#Composer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#DirectorAward"/>
         <Class IRI="#PersonAward"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#DirectorAward"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AwardedToDirector"/>
+            <Class IRI="#Director"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#EditorAward"/>
         <Class IRI="#PersonAward"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EditorAward"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AwardedToEditor"/>
+            <Class IRI="#Editor"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Europe"/>
@@ -723,6 +757,13 @@
         <Class IRI="#Award"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#FilmAward"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AwardedToFilm"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#FilmSeries"/>
         <ObjectMinCardinality cardinality="2">
             <ObjectProperty IRI="#hasFilm"/>
@@ -742,6 +783,17 @@
             <DataProperty IRI="#hasFilmingLocationName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InFilmAward"/>
+        <Class IRI="#Award"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InFilmAward"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AwardedInFilm"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Male"/>
@@ -777,11 +829,18 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PersonAward"/>
-        <Class IRI="#Award"/>
+        <Class IRI="#InFilmAward"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ProducerAward"/>
-        <Class IRI="#Award"/>
+        <Class IRI="#InFilmAward"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProducerAward"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AwardToProducer"/>
+            <Class IRI="#ProductionCompany"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ProductionCompany"/>
@@ -811,6 +870,13 @@
     <SubClassOf>
         <Class IRI="#WriterAward"/>
         <Class IRI="#PersonAward"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WriterAward"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AwardedToWriter"/>
+            <Class IRI="#Writer"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#ActorAward"/>
@@ -1164,6 +1230,10 @@
         <Class IRI="#Award"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AwardedInFilm"/>
+        <Class IRI="#Award"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#AwardedToActor"/>
         <Class IRI="#Award"/>
     </ObjectPropertyDomain>
@@ -1350,6 +1420,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#AwardToProducer"/>
         <Class IRI="#ProductionCompany"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AwardedInFilm"/>
+        <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#AwardedToActor"/>
