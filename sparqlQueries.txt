@@ -10,5 +10,7 @@ SELECT ?name ?filmingLocation ?country
 	WHERE {
 		?film f:hasFilmName ?name.
 		?film f:hasFilmingLocation ?filmingLocation.
-		?filmingLocation f:hasLocationCountry ?country.	
+		?filmingLocation f:hasLocationCountry ?country.
+		?country a f:Europe.	
 }
+

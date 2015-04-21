@@ -1185,6 +1185,10 @@ Email: mak1g11@soton.ac.uk</Literal>
         <NamedIndividual IRI="#UK"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Europe"/>
+        <NamedIndividual IRI="#UK"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
@@ -1464,8 +1468,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
         <ObjectProperty IRI="#BirthCountryOf"/>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1516,8 +1520,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isFilmOfInSeries"/>
         <ObjectProperty IRI="#hasFilmInSeries"/>
+        <ObjectProperty IRI="#isFilmOfInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasSubject"/>
