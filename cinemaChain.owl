@@ -44,6 +44,9 @@
         <Class IRI="#ActorAward"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Agent"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Award"/>
     </Declaration>
     <Declaration>
@@ -83,9 +86,6 @@
         <Class IRI="#EditorAward"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Female"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Film"/>
     </Declaration>
     <Declaration>
@@ -110,9 +110,6 @@
         <Class IRI="#InFilmAward"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Male"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Person"/>
     </Declaration>
     <Declaration>
@@ -131,22 +128,10 @@
         <Class IRI="#ProductionCompany"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Release"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Role"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#RomanticComedyFilm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RomanticComedyFilmLocationInUK"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RomanticComedyLocationUK"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Sex"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Subject"/>
@@ -329,6 +314,9 @@
         <ObjectProperty IRI="#isSubjectOf"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasAgentName"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasAwardName"/>
     </Declaration>
     <Declaration>
@@ -347,10 +335,10 @@
         <DataProperty IRI="#hasFilmName"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasName"/>
+        <DataProperty IRI="#hasGender"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasPersonName"/>
+        <DataProperty IRI="#hasName"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasPlaceName"/>
@@ -383,6 +371,9 @@
         <NamedIndividual IRI="#Bulgaria"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CharacterFemaleToBePlayedByMale"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#China"/>
     </Declaration>
     <Declaration>
@@ -401,10 +392,13 @@
         <NamedIndividual IRI="#Europe"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ExampleFIlmForComposerAsSubject"/>
+        <NamedIndividual IRI="#ExampleFilmForComposerAsSubject"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExampleWriterAndDirector"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Family"/>
@@ -443,6 +437,9 @@
         <NamedIndividual IRI="#Romance"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#RomanticComedyFilmUK"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#SouthAmerica"/>
     </Declaration>
     <Declaration>
@@ -450,6 +447,33 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sudan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheMatrix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminator2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminator3RiseOfTheMachines"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminator4Genesys"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Thriller"/>
@@ -501,16 +525,16 @@
                 <ObjectProperty IRI="#PlayedBy"/>
                 <ObjectIntersectionOf>
                     <Class IRI="#Actor"/>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty IRI="#hasSex"/>
-                        <Class IRI="#Male"/>
-                    </ObjectSomeValuesFrom>
+                    <DataHasValue>
+                        <DataProperty IRI="#hasGender"/>
+                        <Literal datatypeIRI="&xsd;string">male</Literal>
+                    </DataHasValue>
                 </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasSex"/>
-                <Class IRI="#Female"/>
-            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="#hasGender"/>
+                <Literal datatypeIRI="&xsd;string">female</Literal>
+            </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -528,10 +552,20 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#PersonSubject"/>
+        <Class IRI="#FilmSeries"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#hasFilmInSeries"/>
+            <Class IRI="#Film"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FilmingLocation"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <Class IRI="#Subject"/>
+            <Class IRI="#Place"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#FilmingLocationOf"/>
+                <Class IRI="#Film"/>
+            </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -556,14 +590,11 @@
                 <ObjectProperty IRI="#FilmingLocationOf"/>
                 <Class IRI="#RomanticComedyFilm"/>
             </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#isPlaceIn"/>
+                <NamedIndividual IRI="#UK"/>
+            </ObjectHasValue>
         </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Sex"/>
-        <ObjectUnionOf>
-            <Class IRI="#Female"/>
-            <Class IRI="#Male"/>
-        </ObjectUnionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Trilogy"/>
@@ -615,6 +646,20 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Agent"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasBirthYear"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Agent"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasGender"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Award"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasAwardName"/>
@@ -630,6 +675,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Character"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Character"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#CharacterOf"/>
             <Class IRI="#Film"/>
@@ -641,6 +690,13 @@
             <ObjectProperty IRI="#PlayedBy"/>
             <Class IRI="#Actor"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Character"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#City"/>
@@ -721,10 +777,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Female"/>
-        <Class IRI="#Sex"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasActor"/>
@@ -776,13 +828,6 @@
     <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasRelease"/>
-            <Class IRI="#Release"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Film"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasSubject"/>
             <Class IRI="#Subject"/>
         </ObjectSomeValuesFrom>
@@ -828,24 +873,6 @@
         <Class IRI="#FilmDetail"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FilmSeries"/>
-        <ObjectMinCardinality cardinality="2">
-            <ObjectProperty IRI="#hasFilmInSeries"/>
-            <Class IRI="#Film"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FilmingLocation"/>
-        <Class IRI="#Place"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FilmingLocation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#FilmingLocationOf"/>
-            <Class IRI="#Film"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#InFilmAward"/>
         <Class IRI="#Award"/>
     </SubClassOf>
@@ -857,33 +884,16 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Male"/>
-        <Class IRI="#Sex"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Person"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSex"/>
-            <Class IRI="#Sex"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Person"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasBirthYear"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Person"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasPersonName"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
+        <Class IRI="#Agent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PersonAward"/>
         <Class IRI="#InFilmAward"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonSubject"/>
+        <Class IRI="#Subject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ProducerAward"/>
@@ -902,24 +912,6 @@
             <DataProperty IRI="#hasProductionCompanyName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Release"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasRelease"/>
-            <Class IRI="#Place"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Release"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasReleaseYear"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Subject"/>
-        <Class IRI="#FilmDetail"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Subject"/>
@@ -960,8 +952,16 @@
         <NamedIndividual IRI="#Action"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#Africa"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#FilmGenre"/>
         <NamedIndividual IRI="#Animation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#Asia"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Country"/>
@@ -970,6 +970,10 @@
     <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Bulgaria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#CharacterFemaleToBePlayedByMale"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Country"/>
@@ -992,8 +996,20 @@
         <NamedIndividual IRI="#Crime"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#ExampleFilmForComposerAsSubject"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Film"/>
         <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#ExampleWriterAndDirector"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FilmGenre"/>
@@ -1028,6 +1044,14 @@
         <NamedIndividual IRI="#Mystery"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#NorthAmerica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#Oceania"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Pakistan"/>
     </ClassAssertion>
@@ -1036,12 +1060,52 @@
         <NamedIndividual IRI="#Romance"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#RomanticComedyFilmUK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#SouthAmerica"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Spain"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Sudan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Trilogy"/>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheTerminator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheTerminator2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheTerminator3RiseOfTheMachines"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheTerminator4Genesys"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FilmGenre"/>
@@ -1061,13 +1125,78 @@
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasComposer"/>
-        <NamedIndividual IRI="#ExampleFIlmForComposerAsSubject"/>
+        <NamedIndividual IRI="#ExampleFilmForComposerAsSubject"/>
         <NamedIndividual IRI="#ComposerWhoIsSubject"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasSubject"/>
-        <NamedIndividual IRI="#ExampleFIlmForComposerAsSubject"/>
+        <NamedIndividual IRI="#ExampleFilmForComposerAsSubject"/>
         <NamedIndividual IRI="#ComposerWhoIsSubject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDirector"/>
+        <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
+        <NamedIndividual IRI="#ExampleWriterAndDirector"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWriter"/>
+        <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
+        <NamedIndividual IRI="#ExampleWriterAndDirector"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#London"/>
+        <NamedIndividual IRI="#UK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#RomanticComedyFilmUK"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#RomanticComedyFilmUK"/>
+        <NamedIndividual IRI="#Comedy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+        <NamedIndividual IRI="#RomanticComedyFilmUK"/>
+        <NamedIndividual IRI="#London"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
+        <NamedIndividual IRI="#TheTerminator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
+        <NamedIndividual IRI="#TheTerminator2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
+        <NamedIndividual IRI="#TheTerminator3RiseOfTheMachines"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
+        <NamedIndividual IRI="#TheTerminator4Genesys"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ActorAwarded"/>
@@ -1394,7 +1523,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#CharacterOf"/>
-        <Class IRI="#Person"/>
+        <Class IRI="#Character"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#ComposerAwarded"/>
@@ -1447,10 +1576,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#ProducerOf"/>
         <Class IRI="#ProductionCompany"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#ReleaseOf"/>
-        <Class IRI="#Release"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#ReleasePlaceOf"/>
@@ -1507,10 +1632,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRelease"/>
         <Class IRI="#Film"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasReleasePlace"/>
-        <Class IRI="#Release"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSex"/>
@@ -1653,10 +1774,6 @@
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#ReleasePlaceOf"/>
-        <Class IRI="#Release"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#WriterAwarded"/>
         <Class IRI="#Award"/>
     </ObjectPropertyRange>
@@ -1670,7 +1787,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCharacter"/>
-        <Class IRI="#Person"/>
+        <Class IRI="#Character"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasComposer"/>
@@ -1705,16 +1822,8 @@
         <Class IRI="#ProductionCompany"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasRelease"/>
-        <Class IRI="#Release"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasReleasePlace"/>
         <Class IRI="#Place"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasSex"/>
-        <Class IRI="#Sex"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSubject"/>
@@ -1741,6 +1850,10 @@
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasAgentName"/>
+        <DataProperty IRI="#hasName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasAwardName"/>
         <DataProperty IRI="#hasName"/>
     </SubDataPropertyOf>
@@ -1762,10 +1875,6 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasFilmName"/>
-        <DataProperty IRI="#hasName"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasPersonName"/>
         <DataProperty IRI="#hasName"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -1793,14 +1902,15 @@
         <DataProperty IRI="#hasFilmName"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="#hasPersonName"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
         <DataProperty IRI="#hasPlaceName"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasProductionCompanyName"/>
     </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAgentName"/>
+        <Class IRI="#Agent"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasAwardName"/>
         <Class IRI="#Award"/>
@@ -1826,17 +1936,21 @@
         <Class IRI="#Film"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasPersonName"/>
-        <Class IRI="#Person"/>
+        <DataProperty IRI="#hasGender"/>
+        <Class IRI="#Agent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPlaceName"/>
+        <Class IRI="#Place"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasProductionCompanyName"/>
         <Class IRI="#ProductionCompany"/>
     </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasReleaseYear"/>
-        <Class IRI="#Release"/>
-    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAgentName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasAwardName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -1862,11 +1976,15 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasGender"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#hasPersonName"/>
+        <DataProperty IRI="#hasPlaceName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1993,23 +2111,8 @@ E(example)
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Release</IRI>
-        <Literal datatypeIRI="&xsd;string">A release class, linking films with a release year and release country and allowing numerous instances (for different countries)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#RomanticComedyFilm</IRI>
         <Literal datatypeIRI="&xsd;string">Defined class having Romance and Comedy as its genres</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#RomanticComedyLocationUK</IRI>
-        <Literal datatypeIRI="&xsd;string">Defined class location romantic comedies in the uk</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Sex</IRI>
-        <Literal datatypeIRI="&xsd;string">Gender of Person</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
