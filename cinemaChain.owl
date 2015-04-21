@@ -215,10 +215,13 @@
         <ObjectProperty IRI="#AwardedToWriter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#BirthCountryOf"/>
+        <ObjectProperty IRI="#BirthPlaceOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#BornIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#BornInPlace"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -246,9 +249,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#FilmingLocationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#LocationCountryOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#PersonAwarded"/>
@@ -293,9 +293,6 @@
         <ObjectProperty IRI="#hasComposer"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasDirector"/>
     </Declaration>
     <Declaration>
@@ -312,9 +309,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasFilmingLocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasLocationCountry"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasProducer"/>
@@ -623,20 +617,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#RomanticComedyLocationUK"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#FilmingLocation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#FilmingLocationOf"/>
-                <Class IRI="#RomanticComedyFilm"/>
-            </ObjectSomeValuesFrom>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasLocationCountry"/>
-                <NamedIndividual IRI="#UK"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Sex"/>
         <ObjectUnionOf>
             <Class IRI="#Female"/>
@@ -666,6 +646,13 @@
     <SubClassOf>
         <Class IRI="#Actor"/>
         <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ActorOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Actor"/>
@@ -706,6 +693,13 @@
             <DataProperty IRI="#hasAwardYear"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#CharacterOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Character"/>
@@ -839,7 +833,7 @@
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasFilmingLocation"/>
-            <Class IRI="#FilmingLocation"/>
+            <Class IRI="#Place"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -874,7 +868,7 @@
         <Class IRI="#Film"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#hasFilmGenre"/>
-            <Class IRI="#Genre"/>
+            <Class IRI="#FilmGenre"/>
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -939,13 +933,6 @@
     <SubClassOf>
         <Class IRI="#Person"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasCountryOfBirth"/>
-            <Class IRI="#Country"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Person"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasSex"/>
             <Class IRI="#Sex"/>
         </ObjectSomeValuesFrom>
@@ -1003,6 +990,10 @@
     <SubClassOf>
         <Class IRI="#SouthAmerica"/>
         <Class IRI="#Continent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Subject"/>
+        <Class IRI="#FilmDetail"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Subject"/>
@@ -1268,11 +1259,6 @@
         <NamedIndividual IRI="#500DaysOfSummer"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasLocationCountry"/>
-        <NamedIndividual IRI="#London"/>
-        <NamedIndividual IRI="#UK"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#CharacterOf"/>
         <NamedIndividual IRI="#Terminator"/>
         <NamedIndividual IRI="#TheTerminator"/>
@@ -1350,6 +1336,10 @@
         <ObjectProperty IRI="#AwardedTo"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#AwardedInFilm"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#AwardedToActor"/>
         <ObjectProperty IRI="#AwardedToPerson"/>
     </SubObjectPropertyOf>
@@ -1426,6 +1416,10 @@
         <ObjectProperty IRI="#WorksOn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ReleasePlaceOf"/>
+        <ObjectProperty IRI="#hasRelease"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#WriterAwarded"/>
         <ObjectProperty IRI="#PersonAwarded"/>
     </SubObjectPropertyOf>
@@ -1466,11 +1460,27 @@
         <ObjectProperty IRI="#WorkedOnBy"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRelease"/>
+        <ObjectProperty IRI="#hasFilmDetail"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReleasePlace"/>
+        <ObjectProperty IRI="#hasRelease"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSubject"/>
+        <ObjectProperty IRI="#hasFilmDetail"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasWriter"/>
         <ObjectProperty IRI="#WorkedOnBy"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isFilmGenreOf"/>
+        <ObjectProperty IRI="#hasFilmDetail"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSubjectOf"/>
         <ObjectProperty IRI="#hasFilmDetail"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
@@ -1510,10 +1520,6 @@
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
-        <ObjectProperty IRI="#BirthCountryOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
         <ObjectProperty IRI="#hasCharacter"/>
     </InverseObjectProperties>
@@ -1532,10 +1538,6 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#FilmingLocationOf"/>
         <ObjectProperty IRI="#hasFilmingLocation"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#LocationCountryOf"/>
-        <ObjectProperty IRI="#hasLocationCountry"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#Plays"/>
@@ -1573,13 +1575,7 @@
         <ObjectProperty IRI="#BornIn"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasDirector"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasLocationCountry"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasSex"/>
@@ -1632,11 +1628,15 @@
         <Class IRI="#Award"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#BirthCountryOf"/>
-        <Class IRI="#Country"/>
+        <ObjectProperty IRI="#BirthPlaceOf"/>
+        <Class IRI="#Place"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#BornIn"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#BornInPlace"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1673,11 +1673,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#FilmingLocationOf"/>
-        <Class IRI="#FilmingLocation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#LocationCountryOf"/>
-        <Class IRI="#Country"/>
+        <Class IRI="#Place"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#PersonAwarded"/>
@@ -1728,10 +1724,6 @@
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
-        <Class IRI="#Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDirector"/>
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
@@ -1750,10 +1742,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasFilmingLocation"/>
         <Class IRI="#Film"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasLocationCountry"/>
-        <Class IRI="#FilmingLocation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasProducer"/>
@@ -1836,12 +1824,16 @@
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#BirthCountryOf"/>
+        <ObjectProperty IRI="#BirthPlaceOf"/>
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#BornIn"/>
         <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#BornInPlace"/>
+        <Class IRI="#Place"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1878,10 +1870,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#FilmingLocationOf"/>
         <Class IRI="#Film"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#LocationCountryOf"/>
-        <Class IRI="#FilmingLocation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#PersonAwarded"/>
@@ -1932,10 +1920,6 @@
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
-        <Class IRI="#Country"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDirector"/>
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
@@ -1954,10 +1938,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasFilmingLocation"/>
         <Class IRI="#Place"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasLocationCountry"/>
-        <Class IRI="#Country"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasProducer"/>
