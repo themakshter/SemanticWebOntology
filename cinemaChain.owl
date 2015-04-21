@@ -44,12 +44,6 @@
         <Class IRI="#ActorAward"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Africa"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Asia"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Award"/>
     </Declaration>
     <Declaration>
@@ -87,9 +81,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#EditorAward"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Europe"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Female"/>
@@ -156,9 +147,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Sex"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SouthAmerica"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Subject"/>
@@ -380,7 +368,13 @@
         <NamedIndividual IRI="#Action"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Africa"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Animation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Asia"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Brazil"/>
@@ -402,6 +396,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Crime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Europe"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ExampleFIlmForComposerAsSubject"/>
@@ -434,10 +431,19 @@
         <NamedIndividual IRI="#Mystery"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#NorthAmerica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oceania"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Pakistan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Romance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SouthAmerica"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Spain"/>
@@ -477,20 +483,14 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Country"/>
+        <Class IRI="#Continent"/>
         <ObjectOneOf>
-            <NamedIndividual IRI="#China"/>
-            <NamedIndividual IRI="#Bulgaria"/>
-            <NamedIndividual IRI="#USA"/>
-            <NamedIndividual IRI="#Germany"/>
-            <NamedIndividual IRI="#Columbia"/>
-            <NamedIndividual IRI="#UK"/>
-            <NamedIndividual IRI="#Brazil"/>
-            <NamedIndividual IRI="#UAE"/>
-            <NamedIndividual IRI="#France"/>
-            <NamedIndividual IRI="#Pakistan"/>
-            <NamedIndividual IRI="#Spain"/>
-            <NamedIndividual IRI="#Sudan"/>
+            <NamedIndividual IRI="#Oceania"/>
+            <NamedIndividual IRI="#Europe"/>
+            <NamedIndividual IRI="#SouthAmerica"/>
+            <NamedIndividual IRI="#Africa"/>
+            <NamedIndividual IRI="#Asia"/>
+            <NamedIndividual IRI="#NorthAmerica"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -615,14 +615,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Africa"/>
-        <Class IRI="#Continent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Asia"/>
-        <Class IRI="#Continent"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Award"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasAwardName"/>
@@ -727,10 +719,6 @@
             <ObjectProperty IRI="#AwardedToEditor"/>
             <Class IRI="#Editor"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Europe"/>
-        <Class IRI="#Continent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Female"/>
@@ -930,10 +918,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SouthAmerica"/>
-        <Class IRI="#Continent"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Subject"/>
         <Class IRI="#FilmDetail"/>
     </SubClassOf>
@@ -966,6 +950,11 @@
             <Class IRI="#Writer"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#City"/>
+        <Class IRI="#Continent"/>
+        <Class IRI="#Country"/>
+    </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#FilmGenre"/>
         <NamedIndividual IRI="#Action"/>
@@ -1900,16 +1889,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Africa</IRI>
-        <Literal datatypeIRI="&xsd;string">African countries</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Asia</IRI>
-        <Literal datatypeIRI="&xsd;string">Asian Countries</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Award</IRI>
         <Literal datatypeIRI="&xsd;string">Award concept. Divided further into Film awards and in film awards, which are to producers and persons
 
@@ -1966,11 +1945,6 @@ E(example)
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#EditorAward</IRI>
         <Literal datatypeIRI="&xsd;string">Award to editor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Europe</IRI>
-        <Literal datatypeIRI="&xsd;string">European countries</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2036,11 +2010,6 @@ E(example)
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Sex</IRI>
         <Literal datatypeIRI="&xsd;string">Gender of Person</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#SouthAmerica</IRI>
-        <Literal datatypeIRI="&xsd;string">South American countries</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
