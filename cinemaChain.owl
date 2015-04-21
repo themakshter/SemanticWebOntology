@@ -44,9 +44,6 @@
         <Class IRI="#ActorAward"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Agent"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Award"/>
     </Declaration>
     <Declaration>
@@ -84,6 +81,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#EditorAward"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Film"/>
@@ -314,9 +314,6 @@
         <ObjectProperty IRI="#isSubjectOf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasAgentName"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasAwardName"/>
     </Declaration>
     <Declaration>
@@ -327,6 +324,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasDeathYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEntityName"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasEventYear"/>
@@ -646,20 +646,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Agent"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasBirthYear"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Agent"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasGender"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Award"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasAwardName"/>
@@ -675,7 +661,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Character"/>
-        <Class IRI="#Agent"/>
+        <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Character"/>
@@ -775,6 +761,20 @@
             <ObjectProperty IRI="#AwardedToEditor"/>
             <Class IRI="#Editor"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasGender"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Film"/>
@@ -885,11 +885,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Person"/>
-        <Class IRI="#Agent"/>
+        <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PersonAward"/>
         <Class IRI="#InFilmAward"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonSubject"/>
+        <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PersonSubject"/>
@@ -1850,10 +1854,6 @@
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
-        <DataProperty IRI="#hasAgentName"/>
-        <DataProperty IRI="#hasName"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#hasAwardName"/>
         <DataProperty IRI="#hasName"/>
     </SubDataPropertyOf>
@@ -1868,6 +1868,10 @@
     <SubDataPropertyOf>
         <DataProperty IRI="#hasDeathYear"/>
         <DataProperty IRI="#hasEventYear"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasEntityName"/>
+        <DataProperty IRI="#hasName"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasEventYear"/>
@@ -1908,10 +1912,6 @@
         <DataProperty IRI="#hasProductionCompanyName"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasAgentName"/>
-        <Class IRI="#Agent"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasAwardName"/>
         <Class IRI="#Award"/>
     </DataPropertyDomain>
@@ -1921,11 +1921,15 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasBirthYear"/>
-        <Class IRI="#Person"/>
+        <Class IRI="#Entity"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasDeathYear"/>
-        <Class IRI="#Person"/>
+        <Class IRI="#Entity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEntityName"/>
+        <Class IRI="#Entity"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasEventYear"/>
@@ -1937,7 +1941,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasGender"/>
-        <Class IRI="#Agent"/>
+        <Class IRI="#Entity"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasPlaceName"/>
@@ -1947,10 +1951,6 @@
         <DataProperty IRI="#hasProductionCompanyName"/>
         <Class IRI="#ProductionCompany"/>
     </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasAgentName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasAwardName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -1966,6 +1966,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasDeathYear"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEntityName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasEventYear"/>
