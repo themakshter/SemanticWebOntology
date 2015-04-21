@@ -124,6 +124,9 @@ Email: mak1g11@soton.ac.uk</Literal>
         <Class IRI="#Release"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#RomanticComedyFilm"/>
     </Declaration>
     <Declaration>
@@ -1016,6 +1019,10 @@ Email: mak1g11@soton.ac.uk</Literal>
         <Class IRI="#Female"/>
         <Class IRI="#Male"/>
     </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FilmAward"/>
+        <Class IRI="#InFilmAward"/>
+    </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Film"/>
         <NamedIndividual IRI="#500DaysOfSummer"/>
@@ -1459,8 +1466,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#BirthCountryOf"/>
         <ObjectProperty IRI="#hasCountryOfBirth"/>
+        <ObjectProperty IRI="#BirthCountryOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1511,8 +1518,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasFilmInSeries"/>
         <ObjectProperty IRI="#isFilmOfInSeries"/>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasSubject"/>
