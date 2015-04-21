@@ -1149,10 +1149,6 @@ Email: mak1g11@soton.ac.uk</Literal>
         <NamedIndividual IRI="#TheMatrixRevolutions"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#FilmSeries"/>
-        <NamedIndividual IRI="#TheMatrixTrilogy"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Film"/>
         <NamedIndividual IRI="#TheTerminator"/>
     </ClassAssertion>
@@ -1196,11 +1192,6 @@ Email: mak1g11@soton.ac.uk</Literal>
         <Class IRI="#Person"/>
         <NamedIndividual IRI="#WriterAndDirectorOfFilm"/>
     </ClassAssertion>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#TheMatrix"/>
-        <NamedIndividual IRI="#TheMatrixReloaded"/>
-        <NamedIndividual IRI="#TheMatrixRevolutions"/>
-    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmGenre"/>
         <NamedIndividual IRI="#500DaysOfSummer"/>
@@ -1458,8 +1449,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
         <ObjectProperty IRI="#BirthCountryOf"/>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1510,8 +1501,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isFilmOfInSeries"/>
         <ObjectProperty IRI="#hasFilmInSeries"/>
+        <ObjectProperty IRI="#isFilmOfInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasSubject"/>
