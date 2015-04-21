@@ -384,6 +384,9 @@
         <NamedIndividual IRI="#Horror"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#KeanuReeves"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Mystery"/>
     </Declaration>
     <Declaration>
@@ -402,15 +405,6 @@
         <NamedIndividual IRI="#Sudan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Terminator"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Terminator2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#TerminatorThree"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#TheMatrix"/>
     </Declaration>
     <Declaration>
@@ -421,6 +415,21 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TheMatrixTrilogy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminator2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminatorGenysis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminatorRiseOfTheMachines"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Thriller"/>
@@ -992,6 +1001,10 @@
         <NamedIndividual IRI="#Animation"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#ArnoldSchwarzenegger"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Brazil"/>
     </ClassAssertion>
@@ -1032,6 +1045,10 @@
         <NamedIndividual IRI="#Horror"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#KeanuReeves"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Genre"/>
         <NamedIndividual IRI="#Mystery"/>
     </ClassAssertion>
@@ -1048,8 +1065,48 @@
         <NamedIndividual IRI="#Spain"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#StevenSpielberg"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Sudan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmSeries"/>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheTerminator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheTerminator2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheTerminatorGenysis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TheTerminatorRiseOfTheMachines"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmSeries"/>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Genre"/>
@@ -1224,8 +1281,8 @@
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#BirthCountryOf"/>
         <ObjectProperty IRI="#hasCountryOfBirth"/>
+        <ObjectProperty IRI="#BirthCountryOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
