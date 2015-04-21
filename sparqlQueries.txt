@@ -8,6 +8,7 @@ PREFIX f: <http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#>
 
 SELECT ?name 
 	WHERE {
+		?film f:hasFilmName ?name.
 		?film f:hasFilmingLocation ?filmingLocation.
 		?filmingLocation f:hasLocationCountry ?country.
 		?country rdfs:subClassOf f:Europe.

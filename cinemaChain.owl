@@ -1203,6 +1203,11 @@ Email: mak1g11@soton.ac.uk</Literal>
         <NamedIndividual IRI="#Romance"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+        <NamedIndividual IRI="#London"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ActorOf"/>
         <NamedIndividual IRI="#ArnoldSchwarzenegger"/>
         <NamedIndividual IRI="#TheTerminator"/>
@@ -1459,8 +1464,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#BirthCountryOf"/>
         <ObjectProperty IRI="#hasCountryOfBirth"/>
+        <ObjectProperty IRI="#BirthCountryOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1511,8 +1516,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasFilmInSeries"/>
         <ObjectProperty IRI="#isFilmOfInSeries"/>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasSubject"/>
