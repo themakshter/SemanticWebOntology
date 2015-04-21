@@ -412,6 +412,9 @@ Email: mak1g11@soton.ac.uk</Literal>
         <NamedIndividual IRI="#KeanuReeves"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#London"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Mystery"/>
     </Declaration>
     <Declaration>
@@ -1092,6 +1095,10 @@ Email: mak1g11@soton.ac.uk</Literal>
         <NamedIndividual IRI="#KeanuReeves"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#FilmingLocation"/>
+        <NamedIndividual IRI="#London"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Genre"/>
         <NamedIndividual IRI="#Mystery"/>
     </ClassAssertion>
@@ -1223,6 +1230,16 @@ Email: mak1g11@soton.ac.uk</Literal>
         <NamedIndividual IRI="#WriterAndDirectorOfFilm"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#FilmingLocationOf"/>
+        <NamedIndividual IRI="#London"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLocationCountry"/>
+        <NamedIndividual IRI="#London"/>
+        <NamedIndividual IRI="#UK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#CharacterOf"/>
         <NamedIndividual IRI="#Terminator"/>
         <NamedIndividual IRI="#TheTerminator"/>
@@ -1434,8 +1451,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#BirthCountryOf"/>
         <ObjectProperty IRI="#hasCountryOfBirth"/>
+        <ObjectProperty IRI="#BirthCountryOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1486,8 +1503,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasFilmInSeries"/>
         <ObjectProperty IRI="#isFilmOfInSeries"/>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasSubject"/>
