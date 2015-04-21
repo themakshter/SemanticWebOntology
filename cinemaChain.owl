@@ -22,16 +22,20 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&xsd;string">A cinema chain ontolgoy which describes films and the people and locations associated with them.
-
-Created by: Mohammad Ali Khan
-
-Email: mak1g11@soton.ac.uk</Literal>
+        <AnnotationProperty IRI="#creator"/>
+        <Literal datatypeIRI="&xsd;string">Mohammad Ali Khan</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="#email"/>
+        <Literal datatypeIRI="&xsd;string">mak1g11@soton.ac.uk</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal datatypeIRI="&xsd;string">Cinema Chain Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&xsd;string">A cinema chain ontolgoy which describes films and the people and locations associated with them.</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="#Actor"/>
@@ -489,6 +493,18 @@ Email: mak1g11@soton.ac.uk</Literal>
     <Declaration>
         <NamedIndividual IRI="#WriterAndDirectorOfFilm"/>
     </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#email"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#example"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="#Actor"/>
         <ObjectIntersectionOf>
@@ -520,16 +536,6 @@ Email: mak1g11@soton.ac.uk</Literal>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#PlayedBy"/>
                 <Class IRI="#Actor"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Composer"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#ComposerOf"/>
-                <Class IRI="#Film"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -574,26 +580,6 @@ Email: mak1g11@soton.ac.uk</Literal>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hasSex"/>
                 <Class IRI="#Female"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Director"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#DirectorOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Editor"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#EditorOf"/>
-                <Class IRI="#Film"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -688,16 +674,6 @@ Email: mak1g11@soton.ac.uk</Literal>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Writer"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Person"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#WriterOf"/>
-                <Class IRI="#Film"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#WriterAndDirector"/>
         <ObjectIntersectionOf>
             <Class IRI="#Person"/>
@@ -741,6 +717,17 @@ Email: mak1g11@soton.ac.uk</Literal>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Composer"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ComposerOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ComposerAward"/>
         <Class IRI="#PersonAward"/>
     </SubClassOf>
@@ -752,6 +739,17 @@ Email: mak1g11@soton.ac.uk</Literal>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Director"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Director"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#DirectorOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#DirectorAward"/>
         <Class IRI="#PersonAward"/>
     </SubClassOf>
@@ -760,6 +758,17 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#AwardedToDirector"/>
             <Class IRI="#Director"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Editor"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Editor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#EditorOf"/>
+            <Class IRI="#Film"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -977,6 +986,17 @@ Email: mak1g11@soton.ac.uk</Literal>
         <Class IRI="#Subject"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isSubjectOf"/>
+            <Class IRI="#Film"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Writer"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Writer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WriterOf"/>
             <Class IRI="#Film"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1466,8 +1486,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
         <ObjectProperty IRI="#BirthCountryOf"/>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1518,8 +1538,8 @@ Email: mak1g11@soton.ac.uk</Literal>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isFilmOfInSeries"/>
         <ObjectProperty IRI="#hasFilmInSeries"/>
+        <ObjectProperty IRI="#isFilmOfInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasSubject"/>
