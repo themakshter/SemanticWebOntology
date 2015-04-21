@@ -673,6 +673,7 @@ Email: mak1g11@soton.ac.uk</Literal>
             <Class IRI="#FilmSeries"/>
             <ObjectExactCardinality cardinality="3">
                 <ObjectProperty IRI="#hasFilmInSeries"/>
+                <Class IRI="#Film"/>
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -869,6 +870,7 @@ Email: mak1g11@soton.ac.uk</Literal>
         <Class IRI="#FilmSeries"/>
         <ObjectMinCardinality cardinality="2">
             <ObjectProperty IRI="#hasFilmInSeries"/>
+            <Class IRI="#Film"/>
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -1194,6 +1196,11 @@ Email: mak1g11@soton.ac.uk</Literal>
         <Class IRI="#Person"/>
         <NamedIndividual IRI="#WriterAndDirectorOfFilm"/>
     </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#TheMatrix"/>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmGenre"/>
         <NamedIndividual IRI="#500DaysOfSummer"/>
