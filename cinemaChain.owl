@@ -1122,11 +1122,7 @@
         <NamedIndividual IRI="#KeanuReeves"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#FilmingLocation"/>
-        <NamedIndividual IRI="#London"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Place"/>
+        <Class IRI="#City"/>
         <NamedIndividual IRI="#London"/>
     </ClassAssertion>
     <ClassAssertion>
