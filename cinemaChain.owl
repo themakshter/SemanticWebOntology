@@ -608,6 +608,15 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Trilogy"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#FilmSeries"/>
+            <ObjectExactCardinality cardinality="3">
+                <ObjectProperty IRI="#hasFilmInSeries"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Writer"/>
         <ObjectIntersectionOf>
             <Class IRI="#Person"/>
@@ -831,6 +840,12 @@
             <ObjectProperty IRI="#AwardedToFilm"/>
             <Class IRI="#Film"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilmSeries"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#hasFilmInSeries"/>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FilmingLocation"/>
@@ -1107,6 +1122,41 @@
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
+        <NamedIndividual IRI="#TheTerminatorRiseOfTheMachines"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
+        <NamedIndividual IRI="#TheTerminator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
+        <NamedIndividual IRI="#TheTerminatorGenysis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
+        <NamedIndividual IRI="#TheTerminatorSeries"/>
+        <NamedIndividual IRI="#TheTerminator2"/>
+    </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ActorAwarded"/>
         <ObjectProperty IRI="#PersonAwarded"/>
@@ -1264,8 +1314,8 @@
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
         <ObjectProperty IRI="#BirthCountryOf"/>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1316,8 +1366,8 @@
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isFilmOfInSeries"/>
         <ObjectProperty IRI="#hasFilmInSeries"/>
+        <ObjectProperty IRI="#isFilmOfInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasSubject"/>
