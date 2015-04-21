@@ -351,6 +351,9 @@
         <NamedIndividual IRI="#Animation"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ArnoldSchwarzenegger"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Brazil"/>
     </Declaration>
     <Declaration>
@@ -393,7 +396,31 @@
         <NamedIndividual IRI="#Spain"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#StevenSpielberg"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Sudan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Terminator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Terminator2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TerminatorThree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheMatrix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheMatrixTrilogy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Thriller"/>
@@ -1197,8 +1224,8 @@
         <ObjectProperty IRI="#AwardedToWriter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasCountryOfBirth"/>
         <ObjectProperty IRI="#BirthCountryOf"/>
+        <ObjectProperty IRI="#hasCountryOfBirth"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1253,8 +1280,8 @@
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isSubjectOf"/>
         <ObjectProperty IRI="#hasSubject"/>
+        <ObjectProperty IRI="#isSubjectOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#BornIn"/>
