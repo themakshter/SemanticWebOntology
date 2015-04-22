@@ -2505,8 +2505,8 @@
         <ObjectProperty IRI="#ReleaseOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#ReleasePlaceOf"/>
         <ObjectProperty IRI="#hasReleasePlace"/>
+        <ObjectProperty IRI="#ReleasePlaceOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#WorkedOnBy"/>
@@ -2517,16 +2517,16 @@
         <ObjectProperty IRI="#WriterOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isFilmDetailOf"/>
         <ObjectProperty IRI="#hasFilmDetail"/>
+        <ObjectProperty IRI="#isFilmDetailOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isFilmGenreOf"/>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isFilmOfInSeries"/>
         <ObjectProperty IRI="#hasFilmInSeries"/>
+        <ObjectProperty IRI="#isFilmOfInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasPlace"/>
@@ -3158,9 +3158,19 @@
         <Literal datatypeIRI="&xsd;string">Awarded</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwardedInFilm</IRI>
+        <Literal datatypeIRI="&xsd;string">Link from Award to Film for the Awards to other entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AwardedInFilm</IRI>
         <Literal datatypeIRI="&xsd;string">AwardedInFilm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwardedTo</IRI>
+        <Literal datatypeIRI="&xsd;string">Link from Award to other entities</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3238,9 +3248,19 @@
         <Literal datatypeIRI="&xsd;string">AwardedToWriter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BirthPlaceOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Link from Place to Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BirthPlaceOf</IRI>
         <Literal datatypeIRI="&xsd;string">BirthPlaceOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BornInPlace</IRI>
+        <Literal datatypeIRI="&xsd;string">Link from Entitty to Place</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3598,14 +3618,24 @@
         <Literal datatypeIRI="&xsd;string">Place</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PlayedBy</IRI>
+        <Literal datatypeIRI="&xsd;string">Link from Character to Actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PlayedBy</IRI>
         <Literal datatypeIRI="&xsd;string">PlayedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Plays</IRI>
+        <Literal datatypeIRI="&xsd;string">Link from Actor to Character</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Plays</IRI>
-        <Literal datatypeIRI="&xsd;string">Play</Literal>
+        <Literal datatypeIRI="&xsd;string">Plays</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3616,6 +3646,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ProducerAward</IRI>
         <Literal datatypeIRI="&xsd;string">ProducerAward</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProducerAwarded</IRI>
+        <Literal datatypeIRI="&xsd;string">Link from ProductionCompany to Award</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3651,6 +3686,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ReleaseOf</IRI>
         <Literal datatypeIRI="&xsd;string">ReleaseOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ReleasePlaceOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Link from Place to Release</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3746,6 +3786,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#WriterAward</IRI>
         <Literal datatypeIRI="&xsd;string">WriterAward</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WriterAwarded</IRI>
+        <Literal datatypeIRI="&xsd;string">Link from Writer to Award</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
