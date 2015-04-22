@@ -299,6 +299,9 @@
         <ObjectProperty IRI="#hasWriter"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isFilmDetailOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isFilmGenreOf"/>
     </Declaration>
     <Declaration>
@@ -880,6 +883,20 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#BornInPlace"/>
+            <Class IRI="#Place"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasBirthYear"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasGender"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -1076,13 +1093,6 @@
     <SubClassOf>
         <Class IRI="#WriterAward"/>
         <Class IRI="#PersonAward"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#WriterAward"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#AwardedToWriter"/>
-            <Class IRI="#Writer"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Award"/>
@@ -1304,6 +1314,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#City"/>
+        <NamedIndividual IRI="#London"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmingLocation"/>
         <NamedIndividual IRI="#London"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2340,7 +2354,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#FilmingLocationOf"/>
-        <ObjectProperty IRI="#hasFilmDetail"/>
+        <ObjectProperty IRI="#isFilmDetailOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#PersonAwarded"/>
@@ -2356,7 +2370,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ReleaseOf"/>
-        <ObjectProperty IRI="#hasFilmDetail"/>
+        <ObjectProperty IRI="#isFilmDetailOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ReleasePlaceOf"/>
@@ -2412,7 +2426,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSubject"/>
-        <ObjectProperty IRI="#hasFilmDetail"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasWriter"/>
@@ -2420,11 +2434,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isFilmGenreOf"/>
-        <ObjectProperty IRI="#hasFilmDetail"/>
+        <ObjectProperty IRI="#isFilmDetailOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isSubjectOf"/>
-        <ObjectProperty IRI="#hasFilmDetail"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#ActorAwarded"/>
@@ -2459,10 +2473,6 @@
         <ObjectProperty IRI="#PersonAwarded"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#WriterAwarded"/>
-        <ObjectProperty IRI="#AwardedToWriter"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#CharacterOf"/>
         <ObjectProperty IRI="#hasCharacter"/>
     </InverseObjectProperties>
@@ -2495,12 +2505,20 @@
         <ObjectProperty IRI="#ReleaseOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#ReleasePlaceOf"/>
+        <ObjectProperty IRI="#hasReleasePlace"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#WorkedOnBy"/>
         <ObjectProperty IRI="#WorksOn"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasWriter"/>
         <ObjectProperty IRI="#WriterOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isFilmDetailOf"/>
+        <ObjectProperty IRI="#hasFilmDetail"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isFilmGenreOf"/>
@@ -2547,6 +2565,10 @@
         <Class IRI="#Award"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AwardedTo"/>
+        <Class IRI="#Award"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#AwardedToActor"/>
         <Class IRI="#Award"/>
     </ObjectPropertyDomain>
@@ -2580,7 +2602,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#BornInPlace"/>
-        <Class IRI="#Person"/>
+        <Class IRI="#Entity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -2695,6 +2717,10 @@
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReleasePlace"/>
+        <Class IRI="#FilmRelease"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSubject"/>
         <Class IRI="#Film"/>
     </ObjectPropertyDomain>
@@ -2731,6 +2757,10 @@
         <Class IRI="#ProductionCompany"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#Awarded"/>
+        <Class IRI="#Award"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#AwardedInFilm"/>
         <Class IRI="#Film"/>
     </ObjectPropertyRange>
@@ -2760,11 +2790,11 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#AwardedToWriter"/>
-        <Class IRI="#Person"/>
+        <Class IRI="#Writer"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#BirthPlaceOf"/>
-        <Class IRI="#Person"/>
+        <Class IRI="#Entity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#BornInPlace"/>
@@ -2829,6 +2859,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#ReleaseOf"/>
         <Class IRI="#Film"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ReleasePlaceOf"/>
+        <Class IRI="#FilmRelease"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#WriterAwarded"/>
@@ -3079,6 +3113,11 @@
         <Literal datatypeIRI="&xsd;string">ActorAwarded</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActorOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Linking Actor to Film</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ActorOf</IRI>
         <Literal datatypeIRI="&xsd;string">ActorOf</Literal>
@@ -3100,6 +3139,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AwardToProducer</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Award and ProductionCompany</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Awarded</IRI>
         <Literal datatypeIRI="&xsd;string">Awarded</Literal>
     </AnnotationAssertion>
@@ -3114,9 +3158,19 @@
         <Literal datatypeIRI="&xsd;string">AwardedTo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwardedToActor</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Award and Actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AwardedToActor</IRI>
         <Literal datatypeIRI="&xsd;string">AwardedToActor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwardedToComposer</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Award and Composer</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3124,9 +3178,19 @@
         <Literal datatypeIRI="&xsd;string">AwardedToComposer</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwardedToDirector</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Award and Director</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AwardedToDirector</IRI>
         <Literal datatypeIRI="&xsd;string">AwardedToDirector</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwardedToEditor</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Award and Editor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3134,9 +3198,19 @@
         <Literal datatypeIRI="&xsd;string">AwardedToEditor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwardedToFilm</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Award to a Film for a best film award</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AwardedToFilm</IRI>
         <Literal datatypeIRI="&xsd;string">AwardedToFilm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwardedToPerson</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Award and Person</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3144,9 +3218,14 @@
         <Literal datatypeIRI="&xsd;string">AwardedToPerson</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwardedToWriter</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Award and Writer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AwardedToWriter</IRI>
-        <Literal datatypeIRI="&xsd;string">AwardedToEditor</Literal>
+        <Literal datatypeIRI="&xsd;string">AwardedToWriter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3167,6 +3246,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Character</IRI>
         <Literal datatypeIRI="&xsd;string">Character</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CharacterOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Linking Character to Film</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3207,6 +3291,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ComposerAwarded</IRI>
         <Literal datatypeIRI="&xsd;string">ComposerAwarded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ComposerOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Linking Composer to Film</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3269,6 +3358,11 @@
         <Literal datatypeIRI="&xsd;string">DirectorAwarded</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DirectorOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Linking Director to Film</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DirectorOf</IRI>
         <Literal datatypeIRI="&xsd;string">DirectorOf</Literal>
@@ -3297,6 +3391,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#EditorAwarded</IRI>
         <Literal datatypeIRI="&xsd;string">EditorAwarded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EditorOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Linking Editor to Film</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3484,6 +3583,11 @@
         <Literal datatypeIRI="&xsd;string">ProducerAwarded</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProducerOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Linking Producer to Film</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ProducerOf</IRI>
         <Literal datatypeIRI="&xsd;string">ProducerOf</Literal>
@@ -3549,9 +3653,19 @@
         <Literal datatypeIRI="&xsd;string">Trilogy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WorkedOnBy</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to Person/ProductionCompany</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#WorkedOnBy</IRI>
         <Literal datatypeIRI="&xsd;string">WorkedOnBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WorksOn</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking from Person or ProductionCompany to FIlm</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3594,6 +3708,11 @@
         <Literal datatypeIRI="&xsd;string">WriterAwarded</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WriterOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Linking Writer to Film</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#WriterOf</IRI>
         <Literal datatypeIRI="&xsd;string">WriterOf</Literal>
@@ -3629,6 +3748,11 @@
         <Literal datatypeIRI="&xsd;string">example</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasActor</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to Actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasActor</IRI>
         <Literal datatypeIRI="&xsd;string">hasActor</Literal>
@@ -3649,9 +3773,19 @@
         <Literal datatypeIRI="&xsd;string">hasBirthYear</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCharacter</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to Character</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCharacter</IRI>
         <Literal datatypeIRI="&xsd;string">hasCharacter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasComposer</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to Composer</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3664,9 +3798,19 @@
         <Literal datatypeIRI="&xsd;string">hasDeathYear</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDirector</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to Director</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasDirector</IRI>
         <Literal datatypeIRI="&xsd;string">hasDirector</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasEditor</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to Editor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3679,14 +3823,29 @@
         <Literal datatypeIRI="&xsd;string">hasEntityName</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFilmDetail</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to its details</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFilmDetail</IRI>
         <Literal datatypeIRI="&xsd;string">hasFilmDetail</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFilmGenre</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to a Genre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFilmGenre</IRI>
         <Literal datatypeIRI="&xsd;string">hasFilmGenre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFilmInSeries</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to Film series</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3697,6 +3856,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFilmName</IRI>
         <Literal datatypeIRI="&xsd;string">hasFilmName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFilmingLocation</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to a place</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3716,12 +3880,22 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPlace</IRI>
+        <Literal datatypeIRI="&xsd;string">A properly linking place with another place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPlace</IRI>
         <Literal datatypeIRI="&xsd;string">hasPlace</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPlaceName</IRI>
         <Literal datatypeIRI="&xsd;string">hasPlaceName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasProducer</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to ProductionCompany</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3732,6 +3906,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasProductionCompanyName</IRI>
         <Literal datatypeIRI="&xsd;string">hasProductionCompanyName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasRelease</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to a Release</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3749,9 +3928,19 @@
         <Literal datatypeIRI="&xsd;string">hasReleaseYear</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSubject</IRI>
+        <Literal datatypeIRI="&xsd;string">A property linking a Film to a Subject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSubject</IRI>
         <Literal datatypeIRI="&xsd;string">hasSubject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasWriter</IRI>
+        <Literal datatypeIRI="&xsd;string">Property linking Film to Writer</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3762,6 +3951,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasYear</IRI>
         <Literal datatypeIRI="&xsd;string">hasYear</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isFilmDetailOf</IRI>
+        <Literal datatypeIRI="&xsd;string">Inverse relation of hasFilmDetail, and groups up the differnt Film details linking to a Film</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isFilmDetailOf</IRI>
+        <Literal datatypeIRI="&xsd;string">isFilmDetailOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3777,6 +3976,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#isPlaceIn</IRI>
         <Literal datatypeIRI="&xsd;string">isPlaceIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSubjectOf</IRI>
+        <Literal datatypeIRI="&xsd;string">A property linking Subject to Film</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
