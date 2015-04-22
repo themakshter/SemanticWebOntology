@@ -1596,7 +1596,7 @@
         <NamedIndividual IRI="#TheTerminator"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasFilmGenre"/>
+        <ObjectProperty IRI="#AwardedToFilm"/>
         <NamedIndividual IRI="#BestFilmAcademyAward5"/>
         <NamedIndividual IRI="#SherlockFilm1"/>
     </ObjectPropertyAssertion>

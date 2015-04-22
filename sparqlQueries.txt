@@ -59,3 +59,41 @@ SELECT ?actor ?name
 
 		FILTER ( ?year >= "1980"^^xsd:integer)
 	}
+
+-----------------------------------------------------------------------------------------
+//Actors with more than one Academy award
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX f: <http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#>
+
+SELECT ?actor
+	WHERE { 
+		?award rdf:type f:ActorAward.
+		?award f:hasAwardName "Academy Award"^^xsd:string.
+		?award f:AwardedToActor ?actor.
+	}
+	GROUP BY ?actor
+	HAVING (COUNT(*) > 1)
+
+-----------------------------------------------------------------------------------------------
+//Most popular genre in Academy Award winning films
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX f: <http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#>
+
+SELECT ?genre
+	WHERE { 
+		?award rdf:type f:FilmAward.
+		?award f:hasAwardName "Academy Award"^^xsd:string.
+		?award f:AwardedToFilm ?film.
+		?film f:hasFilmGenre ?genre.
+	}
+	GROUP BY ?genre
+	ORDER BY DESC(COUNT(*))
+	LIMIT 1
