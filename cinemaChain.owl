@@ -688,6 +688,13 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#PersonSubject"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <Class IRI="#Subject"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#RomanticComedyFilm"/>
         <ObjectIntersectionOf>
             <Class IRI="#Film"/>
@@ -1047,14 +1054,6 @@
         <Class IRI="#InFilmAward"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PersonSubject"/>
-        <Class IRI="#Person"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PersonSubject"/>
-        <Class IRI="#Subject"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ProducerAward"/>
         <Class IRI="#InFilmAward"/>
     </SubClassOf>
@@ -1236,7 +1235,7 @@
         <NamedIndividual IRI="#Comedy"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Person"/>
+        <Class IRI="#Composer"/>
         <NamedIndividual IRI="#ComposerWhoIsSubject"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1260,7 +1259,11 @@
         <NamedIndividual IRI="#ExampleFilmForWriterAndDirector"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Person"/>
+        <Class IRI="#Director"/>
+        <NamedIndividual IRI="#ExampleWriterAndDirector"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Writer"/>
         <NamedIndividual IRI="#ExampleWriterAndDirector"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2532,16 +2535,16 @@
         <ObjectProperty IRI="#WriterOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasFilmDetail"/>
         <ObjectProperty IRI="#isFilmDetailOf"/>
+        <ObjectProperty IRI="#hasFilmDetail"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isFilmGenreOf"/>
         <ObjectProperty IRI="#hasFilmGenre"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasFilmInSeries"/>
         <ObjectProperty IRI="#isFilmOfInSeries"/>
+        <ObjectProperty IRI="#hasFilmInSeries"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasPlace"/>
