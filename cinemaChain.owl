@@ -449,6 +449,18 @@
         <NamedIndividual IRI="#JamesBondGoldenEyeCharacter"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Actor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Character"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Release"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#JamesBondOctopussyCharacter"/>
     </Declaration>
     <Declaration>
@@ -1192,6 +1204,22 @@
         <NamedIndividual IRI="#JamesBondGoldenEyeCharacter"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Actor"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Actor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Character"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmRelease"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Release"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Character"/>
         <NamedIndividual IRI="#JamesBondOctopussyCharacter"/>
     </ClassAssertion>
@@ -1419,6 +1447,11 @@
         <NamedIndividual IRI="#SouthAmerica"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BornInPlace"/>
+        <NamedIndividual IRI="#DanielCraig"/>
+        <NamedIndividual IRI="#London"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasComposer"/>
         <NamedIndividual IRI="#ExampleFilmForComposerAsSubject"/>
         <NamedIndividual IRI="#ComposerWhoIsSubject"/>
@@ -1462,6 +1495,31 @@
         <ObjectProperty IRI="#PlayedBy"/>
         <NamedIndividual IRI="#JamesBondGoldenEyeCharacter"/>
         <NamedIndividual IRI="#PierceBrosnan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelease"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Release"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ActorOf"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Actor"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BornInPlace"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Actor"/>
+        <NamedIndividual IRI="#London"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CharacterOf"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Character"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#PlayedBy"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Character"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Actor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#CharacterOf"/>
@@ -1509,6 +1567,21 @@
         <NamedIndividual IRI="#Asia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ActorOf"/>
+        <NamedIndividual IRI="#PierceBrosnan"/>
+        <NamedIndividual IRI="#TomorrowNeverDies"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ActorOf"/>
+        <NamedIndividual IRI="#PierceBrosnan"/>
+        <NamedIndividual IRI="#GoldenEye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BornInPlace"/>
+        <NamedIndividual IRI="#PierceBrosnan"/>
+        <NamedIndividual IRI="#London"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmGenre"/>
         <NamedIndividual IRI="#RomanticComedyFilmUK"/>
         <NamedIndividual IRI="#Romance"/>
@@ -1532,6 +1605,16 @@
         <ObjectProperty IRI="#isPlaceIn"/>
         <NamedIndividual IRI="#SanFrancisco"/>
         <NamedIndividual IRI="#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ActorOf"/>
+        <NamedIndividual IRI="#SeanConnery"/>
+        <NamedIndividual IRI="#Octopussy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BornInPlace"/>
+        <NamedIndividual IRI="#SeanConnery"/>
+        <NamedIndividual IRI="#Rome"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRelease"/>
@@ -1627,6 +1710,11 @@
         <ObjectProperty IRI="#hasFilmingLocation"/>
         <NamedIndividual IRI="#SkyFall"/>
         <NamedIndividual IRI="#London"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelease"/>
+        <NamedIndividual IRI="#SkyFall"/>
+        <NamedIndividual IRI="#SkyFallRelease"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPlaceIn"/>
@@ -1689,6 +1777,11 @@
         <NamedIndividual IRI="#TheTerminator4Genesys"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelease"/>
+        <NamedIndividual IRI="#TomorrowNeverDies"/>
+        <NamedIndividual IRI="#TomorrowNeverDiesRelease"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPlaceIn"/>
         <NamedIndividual IRI="#UAE"/>
         <NamedIndividual IRI="#Asia"/>
@@ -1744,6 +1837,11 @@
         <Literal datatypeIRI="&xsd;string">James Bond</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasReleaseYear"/>
+        <NamedIndividual IRI="#JamesBondMovieBefore1980Release"/>
+        <Literal datatypeIRI="&xsd;integer">1969</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasEntityName"/>
         <NamedIndividual IRI="#JamesBondOctopussyCharacter"/>
         <Literal datatypeIRI="&xsd;string">James Bond</Literal>
@@ -1771,7 +1869,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#OctopussyRelease"/>
-        <Literal datatypeIRI="&xsd;string">1969</Literal>
+        <Literal datatypeIRI="&xsd;integer">1982</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEntityName"/>
@@ -1836,7 +1934,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#SkyFallRelease"/>
-        <Literal datatypeIRI="&xsd;string">20011</Literal>
+        <Literal datatypeIRI="&xsd;integer">2011</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasFilmName"/>
@@ -1861,7 +1959,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#TomorrowNeverDiesRelease"/>
-        <Literal datatypeIRI="&xsd;string">2000</Literal>
+        <Literal datatypeIRI="&xsd;integer">2000</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ActorAwarded"/>
