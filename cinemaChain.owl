@@ -467,6 +467,9 @@
         <NamedIndividual IRI="#SanFrancisco"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#SherlockHolmes"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#SkyFall"/>
     </Declaration>
     <Declaration>
@@ -1141,6 +1144,10 @@
         <NamedIndividual IRI="#SanFrancisco"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#SherlockHolmes"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Film"/>
         <NamedIndividual IRI="#SkyFall"/>
     </ClassAssertion>
@@ -1208,6 +1215,11 @@
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+        <NamedIndividual IRI="#London"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPlaceIn"/>
         <NamedIndividual IRI="#Barcelona"/>
@@ -1305,8 +1317,18 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Rome"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
         <NamedIndividual IRI="#SanFrancisco"/>
         <NamedIndividual IRI="#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+        <NamedIndividual IRI="#SkyFall"/>
+        <NamedIndividual IRI="#London"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPlaceIn"/>
@@ -1317,6 +1339,21 @@
         <ObjectProperty IRI="#isPlaceIn"/>
         <NamedIndividual IRI="#Sudan"/>
         <NamedIndividual IRI="#Africa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+        <NamedIndividual IRI="#SanFrancisco"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+        <NamedIndividual IRI="#Rome"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmingLocation"/>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+        <NamedIndividual IRI="#Boston"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmInSeries"/>
@@ -1369,14 +1406,54 @@
         <NamedIndividual IRI="#NorthAmerica"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+        <Literal datatypeIRI="&xsd;string">500 Days Of Summer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#CharacterFemaleToBePlayedByMale"/>
         <Literal datatypeIRI="&xsd;string">female</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#GoldenEye"/>
+        <Literal datatypeIRI="&xsd;string">GoldenEye</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#MaleActorToPlayFemaleCharacter"/>
         <Literal datatypeIRI="&xsd;string">male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#Octopussy"/>
+        <Literal datatypeIRI="&xsd;string">Octopussy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#SkyFall"/>
+        <Literal datatypeIRI="&xsd;string">SkyFall</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+        <Literal datatypeIRI="&xsd;string">The Matrix</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+        <Literal datatypeIRI="&xsd;string">The Matrix Reloaded</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+        <Literal datatypeIRI="&xsd;string">The Matrix Revolutions</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFilmName"/>
+        <NamedIndividual IRI="#TomorrowNeverDies"/>
+        <Literal datatypeIRI="&xsd;string">Tomorrow Never Dies</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ActorAwarded"/>
