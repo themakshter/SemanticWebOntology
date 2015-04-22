@@ -14,3 +14,27 @@ SELECT ?film ?name ?location
 		?location f:isPlaceIn+ f:Europe
 	}
 
+
+----------------------------------------------------------------------------
+//Actors playing Sherlock Holmes and when these films were released in USA
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX f: <http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#>
+
+SELECT ?actor ?name ?year
+	WHERE { 
+		?actor rdf:type f:Actor.
+		?character rdf:type f:Character.
+		?film rdf:type f:Film.
+
+		?character f:hasEntityName "Sherlock Holmes"^^xsd:string.
+		?character f:CharacterOf ?film.
+		?character f:PlayedBy ?actor.
+		?actor f:hasEntityName ?name.
+		?film f:hasRelease ?release.
+		?release f:hasReleasePlace f:USA.
+		?release f:hasReleaseYear ?year.
+	}
