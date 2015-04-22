@@ -359,6 +359,12 @@
         <NamedIndividual IRI="#Action"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ActorPlayingSherlockHolmes1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ActorPlayingSherlockHolmes2"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Africa"/>
     </Declaration>
     <Declaration>
@@ -467,7 +473,13 @@
         <NamedIndividual IRI="#SanFrancisco"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SherlockHolmes"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockHolmesCharacter2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockHolmesCharacter3"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SkyFall"/>
@@ -1000,6 +1012,14 @@
         <NamedIndividual IRI="#Action"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Actor"/>
+        <NamedIndividual IRI="#ActorPlayingSherlockHolmes1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Actor"/>
+        <NamedIndividual IRI="#ActorPlayingSherlockHolmes2"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Continent"/>
         <NamedIndividual IRI="#Africa"/>
     </ClassAssertion>
@@ -1145,7 +1165,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Character"/>
-        <NamedIndividual IRI="#SherlockHolmes"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter3"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Film"/>
@@ -1411,6 +1439,16 @@
         <Literal datatypeIRI="&xsd;string">500 Days Of Summer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasEntityName"/>
+        <NamedIndividual IRI="#ActorPlayingSherlockHolmes1"/>
+        <Literal datatypeIRI="&xsd;string">Benedict Cumbrebatch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEntityName"/>
+        <NamedIndividual IRI="#ActorPlayingSherlockHolmes2"/>
+        <Literal datatypeIRI="&xsd;string">Robert Downey Jr.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#CharacterFemaleToBePlayedByMale"/>
         <Literal datatypeIRI="&xsd;string">female</Literal>
@@ -1429,6 +1467,21 @@
         <DataProperty IRI="#hasFilmName"/>
         <NamedIndividual IRI="#Octopussy"/>
         <Literal datatypeIRI="&xsd;string">Octopussy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEntityName"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter1"/>
+        <Literal datatypeIRI="&xsd;string">Sherlock Holmes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEntityName"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter2"/>
+        <Literal datatypeIRI="&xsd;string">Sherlock Holmes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEntityName"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter3"/>
+        <Literal datatypeIRI="&xsd;string">Sherlock Holmes</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasFilmName"/>
