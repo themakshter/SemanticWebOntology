@@ -1085,6 +1085,15 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <DisjointClasses>
+        <Class IRI="#Award"/>
+        <Class IRI="#Entity"/>
+        <Class IRI="#Film"/>
+        <Class IRI="#FilmDetail"/>
+        <Class IRI="#FilmSeries"/>
+        <Class IRI="#Place"/>
+        <Class IRI="#ProductionCompany"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#City"/>
         <Class IRI="#Continent"/>
         <Class IRI="#Country"/>
@@ -2121,7 +2130,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#GoldenEyeRelease"/>
-        <Literal datatypeIRI="&xsd;string">1990</Literal>
+        <Literal datatypeIRI="&xsd;integer">1990</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEntityName"/>
@@ -2176,32 +2185,32 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#SherlockFilm1ReleaseUK"/>
-        <Literal datatypeIRI="&xsd;string">2009</Literal>
+        <Literal datatypeIRI="&xsd;integer">2009</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#SherlockFilm1ReleaseUSA"/>
-        <Literal datatypeIRI="&xsd;string">2004</Literal>
+        <Literal datatypeIRI="&xsd;integer">2004</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#SherlockFilm2ReleaseUK"/>
-        <Literal datatypeIRI="&xsd;string">2011</Literal>
+        <Literal datatypeIRI="&xsd;integer">2011</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#SherlockFilm2ReleaseUSA"/>
-        <Literal datatypeIRI="&xsd;string">2011</Literal>
+        <Literal datatypeIRI="&xsd;integer">2011</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#SherlockFilm3ReleaseItaly"/>
-        <Literal datatypeIRI="&xsd;string">2015</Literal>
+        <Literal datatypeIRI="&xsd;integer">2015</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasReleaseYear"/>
         <NamedIndividual IRI="#SherlockFilm3ReleaseUSA"/>
-        <Literal datatypeIRI="&xsd;string">2016</Literal>
+        <Literal datatypeIRI="&xsd;integer">2016</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEntityName"/>
