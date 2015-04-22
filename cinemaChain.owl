@@ -1095,6 +1095,13 @@
         <Class IRI="#PersonAward"/>
     </SubClassOf>
     <DisjointClasses>
+        <Class IRI="#ActorAward"/>
+        <Class IRI="#ComposerAward"/>
+        <Class IRI="#DirectorAward"/>
+        <Class IRI="#EditorAward"/>
+        <Class IRI="#WriterAward"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Award"/>
         <Class IRI="#Entity"/>
         <Class IRI="#Film"/>
@@ -1107,6 +1114,14 @@
         <Class IRI="#City"/>
         <Class IRI="#Continent"/>
         <Class IRI="#Country"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FilmAward"/>
+        <Class IRI="#InFilmAward"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PersonAward"/>
+        <Class IRI="#ProducerAward"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Film"/>
@@ -4068,6 +4083,11 @@
         <Literal datatypeIRI="&xsd;string">hasName</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="#example"/>
+        <IRI>#hasPlace</IRI>
+        <Literal datatypeIRI="&xsd;string">Europe has Place UK</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPlace</IRI>
         <Literal datatypeIRI="&xsd;string">A properly linking place with another place</Literal>
@@ -4186,6 +4206,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#isFilmOfInSeries</IRI>
         <Literal datatypeIRI="&xsd;string">isFilmOfInSeries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#example"/>
+        <IRI>#isPlaceIn</IRI>
+        <Literal datatypeIRI="&xsd;string">London is PlaceIn UK, UK isPlaceIn Europe so London also isPlaceIn Europe </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
