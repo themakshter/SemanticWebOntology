@@ -38,3 +38,6 @@ SELECT ?actor ?name ?year
 		?release f:hasReleasePlace f:USA.
 		?release f:hasReleaseYear ?year.
 	}
+
+-----------------------------------------------------------------------------------
+//UK Born actors playing James Bond since 1980
