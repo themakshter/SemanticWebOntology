@@ -473,6 +473,33 @@
         <NamedIndividual IRI="#SanFrancisco"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#SherlockFilm1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUSA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockFilm2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUSA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockFilm3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseItaly"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseUSA"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#SherlockHolmesCharacter1"/>
     </Declaration>
     <Declaration>
@@ -1164,6 +1191,42 @@
         <NamedIndividual IRI="#SanFrancisco"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#SherlockFilm1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmRelease"/>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmRelease"/>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUSA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#SherlockFilm2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmRelease"/>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmRelease"/>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUSA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#SherlockFilm3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmRelease"/>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseItaly"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmRelease"/>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseUSA"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Character"/>
         <NamedIndividual IRI="#SherlockHolmesCharacter1"/>
     </ClassAssertion>
@@ -1354,6 +1417,96 @@
         <NamedIndividual IRI="#USA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelease"/>
+        <NamedIndividual IRI="#SherlockFilm1"/>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelease"/>
+        <NamedIndividual IRI="#SherlockFilm1"/>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUSA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasReleasePlace"/>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUK"/>
+        <NamedIndividual IRI="#UK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasReleasePlace"/>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUSA"/>
+        <NamedIndividual IRI="#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelease"/>
+        <NamedIndividual IRI="#SherlockFilm2"/>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUSA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelease"/>
+        <NamedIndividual IRI="#SherlockFilm2"/>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasReleasePlace"/>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUK"/>
+        <NamedIndividual IRI="#UK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasReleasePlace"/>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUSA"/>
+        <NamedIndividual IRI="#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelease"/>
+        <NamedIndividual IRI="#SherlockFilm3"/>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseUSA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelease"/>
+        <NamedIndividual IRI="#SherlockFilm3"/>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseItaly"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasReleasePlace"/>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseItaly"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasReleasePlace"/>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseUSA"/>
+        <NamedIndividual IRI="#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CharacterOf"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter1"/>
+        <NamedIndividual IRI="#SherlockFilm1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#PlayedBy"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter1"/>
+        <NamedIndividual IRI="#ActorPlayingSherlockHolmes1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CharacterOf"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter2"/>
+        <NamedIndividual IRI="#SherlockFilm2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#PlayedBy"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter2"/>
+        <NamedIndividual IRI="#ActorPlayingSherlockHolmes2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CharacterOf"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter3"/>
+        <NamedIndividual IRI="#SherlockFilm3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#PlayedBy"/>
+        <NamedIndividual IRI="#SherlockHolmesCharacter3"/>
+        <NamedIndividual IRI="#ActorPlayingSherlockHolmes2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmingLocation"/>
         <NamedIndividual IRI="#SkyFall"/>
         <NamedIndividual IRI="#London"/>
@@ -1467,6 +1620,36 @@
         <DataProperty IRI="#hasFilmName"/>
         <NamedIndividual IRI="#Octopussy"/>
         <Literal datatypeIRI="&xsd;string">Octopussy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReleaseYear"/>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUK"/>
+        <Literal datatypeIRI="&xsd;string">2009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReleaseYear"/>
+        <NamedIndividual IRI="#SherlockFilm1ReleaseUSA"/>
+        <Literal datatypeIRI="&xsd;string">2004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReleaseYear"/>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUK"/>
+        <Literal datatypeIRI="&xsd;string">2011</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReleaseYear"/>
+        <NamedIndividual IRI="#SherlockFilm2ReleaseUSA"/>
+        <Literal datatypeIRI="&xsd;string">2011</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReleaseYear"/>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseItaly"/>
+        <Literal datatypeIRI="&xsd;string">2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReleaseYear"/>
+        <NamedIndividual IRI="#SherlockFilm3ReleaseUSA"/>
+        <Literal datatypeIRI="&xsd;string">2016</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEntityName"/>
