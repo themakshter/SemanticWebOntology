@@ -68,9 +68,6 @@
         <Class IRI="#Country"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CrossGenderFemaleCharacter"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Director"/>
     </Declaration>
     <Declaration>
@@ -84,6 +81,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FemaleCharcterPlayedByMan"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Film"/>
@@ -353,6 +353,9 @@
         <DataProperty IRI="#hasYear"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Action"/>
     </Declaration>
     <Declaration>
@@ -363,6 +366,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Asia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Barcelona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boston"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Brazil"/>
@@ -410,7 +419,13 @@
         <NamedIndividual IRI="#Germany"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#GoldenEye"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Horror"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Italy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#JamesBond"/>
@@ -422,6 +437,9 @@
         <NamedIndividual IRI="#London"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MaleActorToPlayFemaleCharacter"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Mystery"/>
     </Declaration>
     <Declaration>
@@ -431,6 +449,9 @@
         <NamedIndividual IRI="#Oceania"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Octopussy"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Pakistan"/>
     </Declaration>
     <Declaration>
@@ -438,6 +459,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RomanticComedyFilmUK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rome"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SanFrancisco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SkyFall"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SouthAmerica"/>
@@ -479,6 +509,9 @@
         <NamedIndividual IRI="#Thriller"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#TomorrowNeverDies"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#UAE"/>
     </Declaration>
     <Declaration>
@@ -518,7 +551,7 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#CrossGenderFemaleCharacter"/>
+        <Class IRI="#FemaleCharcterPlayedByMan"/>
         <ObjectIntersectionOf>
             <Class IRI="#Character"/>
             <ObjectSomeValuesFrom>
@@ -777,6 +810,10 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#FemaleCharcterPlayedByMan"/>
+        <Class IRI="#Character"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Film"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasActor"/>
@@ -952,6 +989,10 @@
         <Class IRI="#Country"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#FilmGenre"/>
         <NamedIndividual IRI="#Action"/>
     </ClassAssertion>
@@ -966,6 +1007,14 @@
     <ClassAssertion>
         <Class IRI="#Continent"/>
         <NamedIndividual IRI="#Asia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#Barcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#Boston"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Country"/>
@@ -1028,8 +1077,16 @@
         <NamedIndividual IRI="#Germany"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#GoldenEye"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#FilmGenre"/>
         <NamedIndividual IRI="#Horror"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#Italy"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Person"/>
@@ -1044,6 +1101,10 @@
         <NamedIndividual IRI="#London"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Actor"/>
+        <NamedIndividual IRI="#MaleActorToPlayFemaleCharacter"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#FilmGenre"/>
         <NamedIndividual IRI="#Mystery"/>
     </ClassAssertion>
@@ -1056,6 +1117,10 @@
         <NamedIndividual IRI="#Oceania"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#Octopussy"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Pakistan"/>
     </ClassAssertion>
@@ -1066,6 +1131,18 @@
     <ClassAssertion>
         <Class IRI="#Film"/>
         <NamedIndividual IRI="#RomanticComedyFilmUK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#Rome"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#SanFrancisco"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#SkyFall"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Continent"/>
@@ -1116,6 +1193,10 @@
         <NamedIndividual IRI="#Thriller"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Film"/>
+        <NamedIndividual IRI="#TomorrowNeverDies"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#UAE"/>
     </ClassAssertion>
@@ -1127,6 +1208,36 @@
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Barcelona"/>
+        <NamedIndividual IRI="#Spain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Boston"/>
+        <NamedIndividual IRI="#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Brazil"/>
+        <NamedIndividual IRI="#SouthAmerica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Bulgaria"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#China"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Columbia"/>
+        <NamedIndividual IRI="#SouthAmerica"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasComposer"/>
         <NamedIndividual IRI="#ExampleFilmForComposerAsSubject"/>
@@ -1149,8 +1260,33 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#France"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Germany"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Italy"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
         <NamedIndividual IRI="#London"/>
         <NamedIndividual IRI="#UK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Plays"/>
+        <NamedIndividual IRI="#MaleActorToPlayFemaleCharacter"/>
+        <NamedIndividual IRI="#CharacterFemaleToBePlayedByMale"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Pakistan"/>
+        <NamedIndividual IRI="#Asia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmGenre"/>
@@ -1166,6 +1302,21 @@
         <ObjectProperty IRI="#hasFilmingLocation"/>
         <NamedIndividual IRI="#RomanticComedyFilmUK"/>
         <NamedIndividual IRI="#London"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#SanFrancisco"/>
+        <NamedIndividual IRI="#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Spain"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#Sudan"/>
+        <NamedIndividual IRI="#Africa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmInSeries"/>
@@ -1202,6 +1353,31 @@
         <NamedIndividual IRI="#TheTerminatorSeries"/>
         <NamedIndividual IRI="#TheTerminator4Genesys"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#UAE"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#UK"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPlaceIn"/>
+        <NamedIndividual IRI="#USA"/>
+        <NamedIndividual IRI="#NorthAmerica"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#CharacterFemaleToBePlayedByMale"/>
+        <Literal datatypeIRI="&xsd;string">female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#MaleActorToPlayFemaleCharacter"/>
+        <Literal datatypeIRI="&xsd;string">male</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ActorAwarded"/>
         <ObjectProperty IRI="#PersonAwarded"/>
@@ -2042,11 +2218,6 @@ E(example)
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Country</IRI>
         <Literal datatypeIRI="&xsd;string">Countries available, is a set individuals and must be one of them. Currently has been divided into subclasses of continents which are disjoint, but could be divided into different classes too.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#CrossGenderFemaleCharacter</IRI>
-        <Literal datatypeIRI="&xsd;string">This is a defined class of a cross-gender character. It is a female character being played by a male actor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
