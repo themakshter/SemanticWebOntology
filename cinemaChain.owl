@@ -377,6 +377,39 @@
         <NamedIndividual IRI="#Barcelona"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#BestActorAcademyAward1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestActorAcademyAward2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestActorAcademyAward3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestActorAcademyAward4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestActorAcademyAward5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestActorAcademyAward6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestFilmAcademyAward1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestFilmAcademyAward2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestFilmAcademyAward3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestFilmAcademyAward4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BestFilmAcademyAward5"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#BondActorNonUKBorn"/>
     </Declaration>
     <Declaration>
@@ -468,6 +501,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#JamesBondTomorrowNeverDiesCharacter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KeanuReeves"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#London"/>
@@ -1108,6 +1144,50 @@
         <NamedIndividual IRI="#Barcelona"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#ActorAward"/>
+        <NamedIndividual IRI="#BestActorAcademyAward1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ActorAward"/>
+        <NamedIndividual IRI="#BestActorAcademyAward2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ActorAward"/>
+        <NamedIndividual IRI="#BestActorAcademyAward3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ActorAward"/>
+        <NamedIndividual IRI="#BestActorAcademyAward4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ActorAward"/>
+        <NamedIndividual IRI="#BestActorAcademyAward5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ActorAward"/>
+        <NamedIndividual IRI="#BestActorAcademyAward6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmAward"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmAward"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmAward"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmAward"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FilmAward"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward5"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Actor"/>
         <NamedIndividual IRI="#BondActorNonUKBorn"/>
     </ClassAssertion>
@@ -1230,6 +1310,10 @@
     <ClassAssertion>
         <Class IRI="#Character"/>
         <NamedIndividual IRI="#JamesBondTomorrowNeverDiesCharacter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Actor"/>
+        <NamedIndividual IRI="#KeanuReeves"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#City"/>
@@ -1422,6 +1506,66 @@
         <NamedIndividual IRI="#Spain"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedInFilm"/>
+        <NamedIndividual IRI="#BestActorAcademyAward1"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToActor"/>
+        <NamedIndividual IRI="#BestActorAcademyAward1"/>
+        <NamedIndividual IRI="#KeanuReeves"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedInFilm"/>
+        <NamedIndividual IRI="#BestActorAcademyAward2"/>
+        <NamedIndividual IRI="#Octopussy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToActor"/>
+        <NamedIndividual IRI="#BestActorAcademyAward2"/>
+        <NamedIndividual IRI="#SeanConnery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedInFilm"/>
+        <NamedIndividual IRI="#BestActorAcademyAward3"/>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToActor"/>
+        <NamedIndividual IRI="#BestActorAcademyAward3"/>
+        <NamedIndividual IRI="#KeanuReeves"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedInFilm"/>
+        <NamedIndividual IRI="#BestActorAcademyAward4"/>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToActor"/>
+        <NamedIndividual IRI="#BestActorAcademyAward4"/>
+        <NamedIndividual IRI="#KeanuReeves"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedInFilm"/>
+        <NamedIndividual IRI="#BestActorAcademyAward5"/>
+        <NamedIndividual IRI="#TomorrowNeverDies"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToActor"/>
+        <NamedIndividual IRI="#BestActorAcademyAward5"/>
+        <NamedIndividual IRI="#PierceBrosnan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedInFilm"/>
+        <NamedIndividual IRI="#BestActorAcademyAward6"/>
+        <NamedIndividual IRI="#GoldenEye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToActor"/>
+        <NamedIndividual IRI="#BestActorAcademyAward6"/>
+        <NamedIndividual IRI="#PierceBrosnan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPlaceIn"/>
         <NamedIndividual IRI="#Boston"/>
         <NamedIndividual IRI="#USA"/>
@@ -1550,6 +1694,21 @@
         <ObjectProperty IRI="#PlayedBy"/>
         <NamedIndividual IRI="#JamesBondTomorrowNeverDiesCharacter"/>
         <NamedIndividual IRI="#PierceBrosnan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ActorOf"/>
+        <NamedIndividual IRI="#KeanuReeves"/>
+        <NamedIndividual IRI="#TheMatrixReloaded"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ActorOf"/>
+        <NamedIndividual IRI="#KeanuReeves"/>
+        <NamedIndividual IRI="#TheMatrixRevolutions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ActorOf"/>
+        <NamedIndividual IRI="#KeanuReeves"/>
+        <NamedIndividual IRI="#TheMatrix"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPlaceIn"/>
@@ -1810,6 +1969,61 @@
         <DataProperty IRI="#hasEntityName"/>
         <NamedIndividual IRI="#ActorPlayingSherlockHolmes2"/>
         <Literal datatypeIRI="&xsd;string">Robert Downey Jr.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestActorAcademyAward1"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestActorAcademyAward2"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestActorAcademyAward3"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestActorAcademyAward4"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestActorAcademyAward5"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestActorAcademyAward6"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward1"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward2"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward3"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward4"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAwardName"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward5"/>
+        <Literal datatypeIRI="&xsd;string">Academy Award</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasGender"/>
