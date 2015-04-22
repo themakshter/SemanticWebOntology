@@ -1496,6 +1496,16 @@
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+        <NamedIndividual IRI="#Comedy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmingLocation"/>
         <NamedIndividual IRI="#500DaysOfSummer"/>
         <NamedIndividual IRI="#London"/>
@@ -1564,6 +1574,31 @@
         <ObjectProperty IRI="#AwardedToActor"/>
         <NamedIndividual IRI="#BestActorAcademyAward6"/>
         <NamedIndividual IRI="#PierceBrosnan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToFilm"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward1"/>
+        <NamedIndividual IRI="#500DaysOfSummer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToFilm"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward2"/>
+        <NamedIndividual IRI="#SkyFall"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToFilm"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward3"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AwardedToFilm"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward4"/>
+        <NamedIndividual IRI="#TheTerminator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#BestFilmAcademyAward5"/>
+        <NamedIndividual IRI="#SherlockFilm1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPlaceIn"/>
@@ -1776,6 +1811,21 @@
         <NamedIndividual IRI="#Rome"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#SherlockFilm1"/>
+        <NamedIndividual IRI="#Mystery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#SherlockFilm1"/>
+        <NamedIndividual IRI="#Thriller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#SherlockFilm1"/>
+        <NamedIndividual IRI="#Action"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRelease"/>
         <NamedIndividual IRI="#SherlockFilm1"/>
         <NamedIndividual IRI="#SherlockFilm1ReleaseUK"/>
@@ -1866,6 +1916,21 @@
         <NamedIndividual IRI="#ActorPlayingSherlockHolmes2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#SkyFall"/>
+        <NamedIndividual IRI="#Mystery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#SkyFall"/>
+        <NamedIndividual IRI="#Thriller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#SkyFall"/>
+        <NamedIndividual IRI="#Action"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmingLocation"/>
         <NamedIndividual IRI="#SkyFall"/>
         <NamedIndividual IRI="#London"/>
@@ -1884,6 +1949,16 @@
         <ObjectProperty IRI="#isPlaceIn"/>
         <NamedIndividual IRI="#Sudan"/>
         <NamedIndividual IRI="#Africa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+        <NamedIndividual IRI="#Thriller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#TheMatrix"/>
+        <NamedIndividual IRI="#Action"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmingLocation"/>
@@ -1916,6 +1991,16 @@
         <NamedIndividual IRI="#TheMatrix"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#TheTerminator"/>
+        <NamedIndividual IRI="#Action"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#TheTerminator"/>
+        <NamedIndividual IRI="#Horror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFilmInSeries"/>
         <NamedIndividual IRI="#TheTerminatorSeries"/>
         <NamedIndividual IRI="#TheTerminator"/>
@@ -1934,6 +2019,21 @@
         <ObjectProperty IRI="#hasFilmInSeries"/>
         <NamedIndividual IRI="#TheTerminatorSeries"/>
         <NamedIndividual IRI="#TheTerminator4Genesys"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#TomorrowNeverDies"/>
+        <NamedIndividual IRI="#Crime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#TomorrowNeverDies"/>
+        <NamedIndividual IRI="#Thriller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFilmGenre"/>
+        <NamedIndividual IRI="#TomorrowNeverDies"/>
+        <NamedIndividual IRI="#Action"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRelease"/>
