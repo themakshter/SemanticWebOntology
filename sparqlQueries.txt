@@ -8,7 +8,7 @@ PREFIX f: <http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#>
 
 SELECT ?film ?name ?location
 	WHERE { 
-		?film rdf:type f:Film.
+		
 		?film f:hasFilmName ?name.
 		?film f:hasFilmingLocation ?location.
 		?location f:isPlaceIn+ f:Europe
@@ -26,10 +26,7 @@ PREFIX f: <http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#>
 
 SELECT ?actor ?name ?year
 	WHERE { 
-		?actor rdf:type f:Actor.
-		?character rdf:type f:Character.
-		?film rdf:type f:Film.
-
+		
 		?character f:hasEntityName "Sherlock Holmes"^^xsd:string.
 		?character f:CharacterOf ?film.
 		?character f:PlayedBy ?actor.
@@ -41,3 +38,24 @@ SELECT ?actor ?name ?year
 
 -----------------------------------------------------------------------------------
 //UK Born actors playing James Bond since 1980
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX f: <http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#>
+
+SELECT ?actor ?name
+	WHERE { 
+		
+		?character f:hasEntityName "James Bond"^^xsd:string.
+		?character f:CharacterOf ?film.
+		?character f:PlayedBy ?actor.
+		?actor f:hasEntityName ?name.
+		?actor f:BornInPlace+ ?place.
+		?place f:isPlaceIn+ f:UK.
+		?film f:hasRelease ?release.
+		?release f:hasReleaseYear ?year.
+
+		FILTER ( ?year >= "1980"^^xsd:integer)
+	}
