@@ -6,11 +6,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX f: <http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#>
 
-SELECT ?name ?filmingLocation ?country
-	WHERE {
+SELECT ?film ?name ?location
+	WHERE { 
+		?film rdf:type f:Film.
 		?film f:hasFilmName ?name.
-		?film f:hasFilmingLocation ?filmingLocation.
-		?filmingLocation f:hasLocationCountry ?country.
-		?country a f:Europe.	
-}
+		?film f:hasFilmingLocation ?location.
+		?location f:isPlaceIn+ f:Europe
+	}
 
