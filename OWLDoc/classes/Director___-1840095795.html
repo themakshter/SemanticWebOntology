@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Ontology Browser</title>
+<meta http-equiv='content-type' content='text/html;charset=UTF-8'>
+<link rel='stylesheet' href='../css/default.css' type='text/css' />
+</head>
+
+<body>
+
+<div id='tabs'>
+<a href='../ontologies/index.html' class='' >Ontologies</a>
+<a href='index.html' class='' >Classes</a>
+<a href='../objectproperties/index.html' class='' >Object Properties</a>
+<a href='../dataproperties/index.html' class='' >Data Properties</a>
+<a href='../annotationproperties/index.html' class='' >Annotation Properties</a>
+<a href='../individuals/index.html' class='' >Individuals</a>
+<a href='../datatypes/index.html' class='' >Datatypes</a>
+<a href='../cloud/' class='' >Clouds</a>
+</div> <!-- tabs -->
+
+
+<div class='summary'><h2>Class: Director</h2>
+
+<div id='annotations_(2)'>
+<h4>Annotations (2)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="../annotationproperties/comment___1501100887.html" class='Annotation Property' title="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a> <span class='literal'>"A Director class. A director is one who has directed a film"</span>(<a href="../datatypes/string___799955032.html" class='Datatype' title="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>)</li>
+<li class="asserted"><a href="../annotationproperties/label___653429740.html" class='Annotation Property' title="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a> <span class='literal'>"Director"</span>(<a href="../datatypes/string___799955032.html" class='Datatype' title="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>)</li>
+</ul>
+</div>
+</div><!-- annotations (2) -->
+
+
+<div id='superclasses_(6)'>
+<h4>Superclasses (6)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="Person___236334486.html" class='Class' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#Person">Person</a></li>
+<li class="inferred"><a href="../objectproperties/BornInPlace___1305239898.html" class='Object Property' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#BornInPlace">BornInPlace</a> <span class='some'>some</span> <a href="Place___-2073587960.html" class='Class' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#Place">Place</a></li>
+<li class="asserted"><a href="../objectproperties/DirectorOf___67316932.html" class='Object Property' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#DirectorOf">DirectorOf</a> <span class='some'>some</span> <a href="Film___2146373573.html" class='Class' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#Film">Film</a></li>
+<li class="inferred"><a href="../dataproperties/hasBirthYear___-151356861.html" class='Data Property' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#hasBirthYear">hasBirthYear</a> <span class='some'>some</span> <a href="../datatypes/integer___-644974203.html" class='Datatype' title="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></li>
+<li class="inferred"><a href="../dataproperties/hasGender___1514421276.html" class='Data Property' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#hasGender">hasGender</a> <span class='some'>some</span> <a href="../datatypes/string___799955032.html" class='Datatype' title="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
+<li class="inferred"><a href="../dataproperties/hasName___-1454028186.html" class='Data Property' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#hasName">hasName</a> <span class='some'>some</span> <a href="../datatypes/string___799955032.html" class='Datatype' title="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
+</ul>
+</div>
+</div><!-- superclasses (6) -->
+
+
+<div id='members_(1)'>
+<h4>Members (1)</h4>
+<div class='codebox'>
+<span class="asserted"><a href="../individuals/ExampleWriterAndDirector___-1956843001.html" class='Individual' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#ExampleWriterAndDirector">ExampleWriterAndDirector</a></span></div>
+</div><!-- members (1) -->
+
+
+<div id='usage_(2)'>
+<h4>Usage (2)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="WriterAndDirector___-643293679.html" class='Class' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#WriterAndDirector">WriterAndDirector</a> <span class='keyword'>&equiv;</span> <a href="Person___236334486.html" class='Class' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#Person">Person</a> <span class='keyword'>and</span> <a href="Writer___448476852.html" class='Class' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#Writer">Writer</a> <span class='keyword'>and</span> <span class='Class active-entity'>Director</span></li>
+<li class="asserted"><a href="DirectorAward___-806329294.html" class='Class' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#DirectorAward">DirectorAward</a> <span class='keyword'>&sube;</span> <a href="../objectproperties/AwardedToDirector___1485358596.html" class='Object Property' title="http://www.semanticweb.org/mohammadali/ontologies/2015/cinemaChain#AwardedToDirector">AwardedToDirector</a> <span class='some'>some</span> <span class='Class active-entity'>Director</span></li>
+</ul>
+</div>
+</div><!-- usage (2) -->
+
+</div> <!-- summary -->
+<p class='footer'>
+<a href='http://code.google.com/p/ontology-browser/' target='_blank'>OWL HTML inside</a>
+</p>
+</body>
+</html>
